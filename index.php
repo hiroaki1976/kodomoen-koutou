@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <?php
+   <?php
     // newsカテゴリーの投稿を取得
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $news_query = new WP_Query(array(
@@ -210,7 +210,7 @@
           <div class="unique-charm-content photo-placeholder-bottom">
             <img
               class="unique-charm-circle"
-              src="<?php echo get_template_directory_uri(); ?>/img/charm-left.JPG"
+              src="<?php echo get_template_directory_uri(); ?>/img/charm-left.jpg"
               alt=""
             />
           </div>
@@ -405,7 +405,7 @@
           <div class="principal-greeting-wrapper">
             <div class="principal-left">
               <div class="principal-photo fade-up">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/principal-img.JPG" alt="園長写真" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/principal-img.jpg" alt="園長写真" />
                 <div class="photo-shadow principal"></div>
                 <img
                   src="<?php echo get_template_directory_uri(); ?>/img/parts/principal-greeting-sun.png"
@@ -477,13 +477,13 @@
         <div class="photos-section">
           <div class="photos-grid">
             <div class="photo-item fade-up">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-top.JPG" alt="園での生活1" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-top.jpg" alt="園での生活1" />
             </div>
             <div class="photo-item fade-up-2">
               <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-top.jpg" alt="園での生活2" />
             </div>
             <div class="photo-item fade-up-2">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-bottom.JPG" alt="園での生活3" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-bottom.jpg" alt="園での生活3" />
             </div>
             <div class="photo-item fade-up">
               <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-bottom.jpg" alt="園での生活4" />
@@ -661,4 +661,4 @@
       </div>
     </section>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

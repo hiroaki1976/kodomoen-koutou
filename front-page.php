@@ -583,7 +583,7 @@
           </div>
           <div class="en-events-name">
             <ul>
-              <li>造形発表会</li>
+              <li>KOUTOU FESTIVAL</li>
               <li>生活発表会</li>
               <li>クリスマス会</li>
             </ul>
