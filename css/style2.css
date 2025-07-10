@@ -1,0 +1,1373 @@
+:root {
+  /* 基本設定 */
+  --std-width: 1280px;
+  --std-clr: #333;
+  --std-fz: ; /* 360-1920 */
+  --std-lh: 1.7;
+  --std-ls: 0;
+
+  /* 色 */
+  --clr-base: #9b1d22; /* 基本色 */
+  --clr-err: #bb2649; /* 注意喚起 */
+  /* メインカラー */
+  --clr-main-01: #;
+  --clr-main-02: #;
+  --clr-main-03: #;
+
+  /* 多用カラー */
+  --clr-white: #fff;
+  --clr-light-gray: #a7a7a7;
+  --clr-gray: #717273;
+
+  /* サブカラー */
+  --clr-sub-01: #ea97ad;
+  --clr-sub-02: #cf8f88;
+  --clr-sub-03: #d0635c;
+  --clr-sub-04: #df736b;
+  --clr-sub-05: #9c1c21;
+  --clr-sub-06: #ce92a0;
+  --clr-sub-07: #ede7d7;
+  --clr-sub-08: #fcccd1;
+  /* デコレーション線 */
+  --clr-dec-line-01: #b9dbfd;
+  --clr-dec-line-02: #f1dda1;
+  --clr-dec-line-03: #f4c4c9;
+  /* アクセントカラー */
+  --clr-acc-01: #fecd04;
+  --clr-acc-02: #fff9ea;
+  --clr-acc-03: #ffcc89;
+
+  /* フォントサイズ */
+  --fz-h1: ; /* 360-1920 */
+  --fz-h2: 41px; /* 360-1920 */
+  --fz-h3: ; /* 360-1920 */
+  --fz-h4: ; /* 360-1920 */
+  --fz-h5: ; /* 360-1920 */
+  --fz-h6: var(--fz-M);
+  --fz-L: ; /* 360-1920 */
+  --fz-M: ; /* 360-1920 */
+  --fz-R: ; /* 360-1920 */
+  --fz-S: 12px;
+
+  /* 調整用 */
+  --adj-100: 100px;
+  --adj-90: 90px;
+  --adj-80: 80px;
+  --adj-70: 70px;
+  --adj-60: 60px;
+  --adj-50: 50px;
+  --adj-40: 40px;
+  --adj-30: 30px;
+  --adj-20: 20px;
+  --adj-10: 10px;
+
+  --TH-height: ;
+  --sec-padding: ;
+  --inner-width-16: clamp(1000px, -1.5rem + 99.6vw, 1576px);
+  --inner-width-10: min(96%, 1000px);
+  --inner-gap: 12px;
+}
+
+/* 基本設定 */
+@font-face {
+  font-family: 'Boku2';
+  src: url('../boku2r//Boku2-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Boku2', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+}
+
+body {
+  color: var(--std-clr);
+  line-height: var(--std-lh);
+  overflow-x: hidden;
+}
+
+/* ヘッダー */
+.top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.school-name {
+margin-left: 20px;
+}
+
+.school-name h2 {
+color: #888;
+font-weight: normal;
+font-size: 28.7px;
+margin-bottom: 5px;
+}
+
+.school-name h1 {
+color: #9b2226;
+font-size: 39.4px;
+font-weight: bold;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+
+.btn {
+  background-color: var(--clr-base);
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border: 1px solid var(--clr-white);
+  border-radius: 27px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 15px 0;
+  /* max-width: 1920px; */
+  background-color: white;
+}
+
+/* 左端の縦線 */
+.navigation::before {
+content: "";
+position: relative;
+top: 20px;
+left: 3%;
+transform: translateY(-50%);
+height: 37px;
+width: 3px;
+background-color: #ffc107;
+}
+
+.navigation::after {
+content: "";
+position: relative;
+right: 3%;
+top: 20px;
+transform: translateY(-50%);
+height: 37px;
+width: 3px;
+background-color: #ffc107;
+}
+
+
+.nav-item {
+  position: relative;
+  padding: 0 10px;
+  color: #888;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* nav-itemの間の縦線 */
+.nav-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 3px;
+  background-color: #ffc107;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #9b2226;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* ハンバーガーメニューがアクティブ時のアニメーション */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* 装飾ライン */
+.decoration-line {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.decoration-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 0% 100% 50% 50%/ 0% 50% 50% 100%;
+  transform: rotate(45deg) skew(10deg, 10deg);
+  margin: 0 5px;
+}
+
+.dot-blue {
+  background-color: var(--clr-dec-line-01);
+}
+
+.dot-yellow {
+  background-color: var(--clr-dec-line-02);
+}
+
+.dot-pink {
+  background-color: var(--clr-dec-line-03);
+}
+
+/* メインビジュアル */
+.en-main-visual {
+  position: relative;
+  width: 100%;
+  height: 0;
+  /* padding-top: 56.25%; 16:9のアスペクト比 */
+  padding-top: 45%;
+  margin: 0 auto;
+}
+
+.en-main-visual img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 130px;
+  object-fit: cover;
+}
+
+.en-main-visual-text {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(0);
+  color: var(--clr-white);
+  font-size: clamp(32px, 5vw, 62px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 45%;
+  line-height: 1.4;
+  text-align: right;
+}
+
+/* 新入園受付 */
+.en-admission-reception {
+  margin: 200px var(--adj-100) var(--adj-80);
+}
+
+.en-admission-reception h2 {
+  font-size: var(--fz-h2);
+  color: var(--clr-base);
+  margin-bottom: var(--adj-20);
+  text-align: center;
+}
+
+.en-certification {
+  display: flex;
+  gap: 0 var(--adj-10);
+  width: 100%;
+  max-width: 1280px;
+  margin: var(--adj-40) auto;
+}
+
+.en-first-certification {
+  width: 100%;
+}
+
+.en-first-certification-title {
+  text-align: center;
+  margin-bottom: var(--adj-30);
+  background-image: url(../img2/logo_kumotaiyo_1_1.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.en-first-certification-title h3 {
+  font-size: 28px;
+  background-image: linear-gradient(to right, rgba(254, 205, 4, 1), rgba(254, 205, 4, 1));
+  background-size: 25% 50px;
+  background-repeat: no-repeat;
+  background-position: 50% 20%; 
+}
+
+.en-first-certification-title p {
+  font-size: 20px;
+}
+
+.en-flow {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  margin: var(--adj-30) auto;
+  justify-content: space-between;
+}
+
+.en-flow-img {
+  padding: 10px;
+  flex: 1;
+}
+
+.en-circle {
+  background-image: url(../img2/logo_maru_1_1.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+}
+.en-circle:nth-of-type(3) {
+  background-size: 90%;
+  background-position: 80% 50%;
+}
+.en-circle:nth-of-type(5) {   
+  background-size: 90%;
+  background-position: 60% 50%;
+}
+
+.en-flow-img p {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
+.en-circle:nth-of-type(5) p {
+  line-height: 2.2;
+}
+
+.en-arrow {
+  background-image: url(../img2/logo_migiya_1_1.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.en-pc-text {
+  display: block;
+  white-space: nowrap;
+}
+.en-sp-text {
+  display: none;
+}
+
+.en-first-certification-text {
+  font-size: 21px;
+}
+
+.en-second-certification {
+  padding-left: var(--adj-20);
+  background-image: repeating-linear-gradient(180deg, #ff1e1e, #ff1e1e 16px, transparent 16px, transparent 36px);
+  background-position: left top;
+  background-repeat: repeat-y;
+  background-size: 2px 100%;
+}
+
+.en-second-certification-title {
+  text-align: center;
+  margin-bottom: var(--adj-30);
+  background-image: url(../img2/logo_kumonizi_1_1.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.en-second-certification-title h3 {
+  font-size: 28px;
+  background-image: linear-gradient(to right, rgba(254, 205, 4, 1), rgba(254, 205, 4, 1));
+  background-size: 70% 50px;
+  background-repeat: no-repeat;
+  background-position: 50% 20%; 
+}
+
+.en-second-certification-title p {
+  font-size: 20px;
+}
+
+.en-second-main-text {
+  font-size: 24px;
+  text-align: center;
+}
+.en-second-sub-text {
+  font-size: 21px;
+  text-align: center;
+  margin-top: var(--adj-30);
+}
+
+.en-second-sub-text span, .en-second-sub-text p {
+  display: inline-block;
+  background-color: var(--clr-acc-01);
+}
+
+.en-note-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+/* 定員・保育料 */
+.en-capacity-fee {
+  margin: var(--adj-80);
+  position: relative;
+  background-image: url(../img2/haikei_sakuramigi_1_1.png);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: 80% -120%;
+}
+
+.en-capacity-fee::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img2/haikei_sakurahidari_1_1.png);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: 20% -120%;
+}
+
+.en-capacity-fee h2 {
+  font-size: var(--fz-h2);
+  color: var(--clr-base);
+  margin-bottom: var(--adj-20);
+  text-align: center;
+}
+
+  .en-data-table-container-pc {
+    display: block;
+    background-color: var(--clr-white);
+    margin: var(--adj-40) auto;
+    padding: var(--adj-20);
+    width: 100%;
+    max-width: 1280px;
+    overflow-x: auto;
+  }
+
+  .en-data-table-container-sp {
+    display: none;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .en-data-table-pc th, .en-data-table-pc td {
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 21px;
+    word-wrap: break-word;
+  }
+
+  .en-data-table-pc thead th { /* 通常のヘッダーセル (2行目) */
+    background-color: var(--clr-white);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-size: 50% 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    font-weight: bold;
+  }
+
+.en-data-table-pc thead th:nth-of-type(5) {
+  background-image: none;
+  }
+.en-data-table-pc thead th:nth-of-type(6) {
+  background-size: 70% 55px;
+  background-position: 50% 50%; 
+}
+.en-data-table-pc thead th:nth-of-type(8){
+  background-size: 75% 40px;
+  background-position: 50% 50%; 
+}
+
+  .en-data-table-pc .en-section-group-header { /* 「定員」「保育料」のグループヘッダー (1行目) */
+    background-color: var(--clr-white);
+    background-image: linear-gradient(to right, rgba(255, 218, 233, 1), rgba(255, 218, 233, 1));
+    background-size: 30% 55px;
+    background-repeat: no-repeat;
+    background-position: 50% 20%; 
+    color: var(--std-clr);
+    font-size: 32px;
+    font-weight: bold;
+    padding: 12px 10px;
+  }
+
+  /* 「認定区分」列の上のスペーサーセル (1行目) */
+  .en-data-table-pc .en-header-spacer-cell {
+    background-color: var(--clr-white); /* 背景を白またはテーブル背景に合わせる */
+    background-image: none;
+    padding: 12px 10px; /* 高さを他のグループヘッダーと合わせる */
+  }
+
+  .en-capacity-subheader th {
+      background-color: var(--clr-white);
+  }
+
+  .en-dotted-line-row td {
+    border: none;
+    border-bottom: 2px dotted #aaa;
+    height: 10px;
+    padding: 5px 0;
+  }
+
+  .en-nintei-type {
+    font-weight: bold;
+    font-size: var(--std-fz);
+    vertical-align: middle;
+    background-image: linear-gradient(to right, rgba(254, 205, 4, 1), rgba(254, 205, 4, 1));
+    background-size: 65% 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+  }
+  .en-nintei-type .en-age-note {
+    display: block;
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 3px;
+  }
+
+  .en-nintei1 {
+    background-color: var(--clr-white);
+  }
+  .en-nintei2 { 
+    background-color: var(--clr-white); 
+  }
+  .en-nintei3 { 
+    background-color: var(--clr-white);
+  }
+
+  .en-no-fee {
+    color: #555;
+  }
+
+  .en-data-table-pc tfoot th, .en-data-table-pc tfoot td {
+      background-color: var(--clr-white);
+  }
+  .en-data-table-pc tfoot td {
+      background-color: var(--clr-white);
+      border: none;
+  }
+  tfoot .en-capacity-subheader th {
+      background-color: var(--clr-white);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      background-size: 50% 30px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+  }
+  tfoot .en-capacity-subheader th:nth-of-type(1) {
+      background-image: none;
+  }
+
+/* こども園概要 */
+.en-summary {
+  margin: var(--adj-80)
+}
+
+.en-summary h2 {
+  font-size: var(--fz-h2);
+  color: var(--clr-base);
+  margin-bottom: var(--adj-20);
+  text-align: center;
+}
+
+.en-summary-container {
+    max-width: 1080px;
+    margin: var(--adj-40) auto;
+    background-color: var(--clr-white);
+    padding: var(--adj-20) var(--adj-30);
+  }
+
+.en-summary-columns-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* カラム間の隙間を確保 */
+}
+
+.en-summary-list { /* 各dl要素（左右のカラムに相当） */
+  flex: 1;
+  min-width: 280px; /* カラムの最小幅 */
+  position: relative; /* 擬似要素の基準点 */
+  padding-left: 140px; /* ★dtの想定される最大幅 + 線とddの間のスペース分。この値を調整★ */
+}
+
+.en-summary-list::before { /* 縦線用の擬似要素 */
+  content: "";
+  position: absolute;
+  top: 0;    /* カラムの上端から */
+  bottom: 0; /* カラムの下端まで */
+  left: 120px; /* ★dtの想定される最大幅の位置。この値を調整★ */
+  width: 2px;  /* 線の太さ */
+  background-color: #cccccc; /* 線の色 */
+}
+
+.en-summary-list dt {
+  font-size: 20px;
+  color: var(--clr-base);
+  position: absolute; /* 左側の固定位置に配置 */
+  left: 0;          /* .summary-listのpadding-leftの内側、左端に配置 */
+  width: 110px;     /* ★dtの幅を固定。この値を調整★ */
+  padding-right: 10px; /* dtと線の間のスペース */
+  padding-top: 5px;    /* ddとの高さ調整用 */
+  padding-bottom: 5px; /* 各dt間のスペースも考慮 */
+  box-sizing: border-box;
+  text-align: right; /* 必要に応じて */
+}
+
+.en-summary-list dd {
+  font-size: 18px;
+  margin-left: 0; /* dtの幅の分はpadding-leftで確保されているので、追加のmarginは不要 */
+  padding-top: 5px;    /* dtとの高さ調整用 */
+  padding-bottom: 15px; /* 各ddの下のスペース（次のdtとの間隔） */
+}
+.en-summary-list dd:last-of-type {
+  padding-bottom: 5px; /* 最後のddの下のスペースを調整 */
+}
+
+/* フッター */
+.footer {
+  background: #fff;
+  padding: 20px 0 0 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #eee;
+}
+.footer::after {
+content: "";
+  position: absolute;
+  bottom: -76px;
+  right: -50px;
+  width: 100%;
+  height: 198%;
+  background: url(../img3/logo_kodomo_1_1.png) no-repeat bottom right;
+  background-size: contain;
+  z-index: 1;
+  pointer-events: none;
+  object-fit: cover;
+  object-position: center;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 20px;
+    
+}
+
+.footer-logo {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.footer-left span {
+    display: block;
+    line-height: 1.2;
+}
+
+.footer-center {
+    color: #888;
+    font-size: 20px;
+    text-align: left;
+    min-width: 320px;
+    margin: 0 389px;
+}
+
+.footer-right {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+}
+
+.children-illustration {
+    height: 173px;
+    width: 240px;
+    right: 22px;
+    display: block;
+    position: absolute;
+}
+
+.copyright {
+    position: relative;
+    z-index: 2;
+    color: #888;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13.7px;
+    letter-spacing: 0.05em;
+}
+
+/* --------
+タブレット表示 
+-----------*/
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 15px;
+    }
+    
+    .logo-container {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    
+    .school-name h2 {
+      font-size: 20px;
+    }
+  
+    .school-name h1 {
+      font-size: 28px;
+    }
+  
+    .buttons {
+      /* width: 100%; */
+      font-size: 16px;
+      padding: 12px 25px;
+      min-width: 150px;
+    }
+    
+    .btn {
+      font-size: 15px;
+      min-width: 150px;
+      padding: 12px 25px;
+    }
+  
+     /* ハンバーガーメニューを表示 */
+    .hamburger {
+      display: flex;
+    }
+  
+    /* ナビゲーションメニューを隠す */
+    
+    /* ナビゲーション */
+    .navigation {
+      display: none;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 20px 0;
+      margin-top: 10px;
+    }
+  
+    /* メニューがアクティブ時に表示 */
+    .navigation.active {
+      display: flex;
+    }
+    
+    .navigation::before,
+    .navigation::after {
+      display: none;
+    }
+  
+  
+    .nav-item {
+      font-size: 20px;
+      padding: 15px 30px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.3s ease;
+    }
+    
+    .nav-item:hover {
+      background-color: #f8f9fa;
+    }
+  
+    .nav-item:not(:last-child)::after {
+      display: none;
+    }
+
+  .en-main-visual {
+    padding-top: 75%; /* モバイルでは4:3のアスペクト比 */
+  }
+  
+  .en-main-visual-text {
+    font-size: clamp(32px, 6vw, 48px);
+    width: 80%;
+    right: 5%;
+    transform: translateY(0);
+    text-align: right;
+  }
+  
+  .en-admission-reception {
+    margin: 160px var(--adj-80) var(--adj-10);
+    } 
+  
+    .en-certification {
+    display: block;
+    margin: var(--adj-30) auto;
+    }
+  
+    .en-first-certification {
+      margin-bottom: var(--adj-30);
+    }
+  
+    .en-second-certification {
+    padding-left: 0;
+    background-image: none;
+  }
+  
+    .en-first-certification-title {
+      background-size: 40%;
+  }
+    .en-first-certification-title h3 {
+      background-size: 20% 50px;
+    }
+
+    .en-first-certification-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .en-second-certification-title {
+      background-size: 40%;
+  }
+
+    .en-second-certification-title h3 {
+      background-size: 30% 50px;
+    }
+  
+    .en-flow {
+      width: 70%;
+      gap: 0 var(--adj-10);
+      margin: 30px auto;
+  }
+  
+    .en-circle {
+      background-size: 100%;
+      background-position: 80% 50%;
+  }
+    .en-circle:nth-of-type(3) {
+      background-size: 100%;
+      background-position: 50% 50%;
+  }
+    .en-circle:nth-of-type(5) {
+      background-size: 100%;
+      background-position: 50% 50%;
+  }
+  
+    .en-arrow {
+      background-size: 110%;
+      background-position: 20% 40%;
+  }
+  
+    .en-flow-img p {
+      font-size: 1em;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+  
+    .en-pc-text {
+      display: none;
+    }
+    .en-sp-text {
+      display: block;
+    }
+  
+    .en-first-certification-text {
+      width: 90%;
+      margin: var(--adj-20) auto;
+    }
+  
+    .en-second-main-text {
+      width: 90%;
+      margin: var(--adj-20) auto;
+    }
+
+    .en-second-sub-text {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .en-capacity-fee {
+      margin: var(--adj-80) var(--adj-10);
+      background-size: 60%;
+      background-position: 120% -5%;
+      z-index: -2;
+    }
+
+    .en-capacity-fee::before {
+      background-size: 60%;
+      background-position: -20% -5%;
+      z-index: -3;
+    }
+
+    .en-data-table-container-pc {
+      display: none;
+    }
+
+    .en-data-table-container-sp{
+      display: block;
+      margin: var(--adj-30) auto;
+    }
+
+    table {
+      table-layout: auto;
+      margin-bottom: var(--adj-30);
+  }
+
+    .en-data-table-sp1 th, .en-data-table-sp1 td {
+      border: none;
+      padding: 10px;
+      text-align: center;
+      font-size: var(--std-fz);
+      word-wrap: break-word;
+  }
+
+    .en-data-table-sp1 .en-header-spacer-cell {
+      background-color: var(--clr-white); /* 背景を白またはテーブル背景に合わせる */
+      background-image: none;
+      padding: 12px 10px; /* 高さを他のグループヘッダーと合わせる */
+  }
+
+    .en-data-table-sp1 thead th { /* 通常のヘッダーセル (2行目) */
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      background-size: 60% 25px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%; 
+      font-weight: bold;
+  }
+
+    .en-data-table-sp1 .en-section-group-header { /* 「定員」「保育料」のグループヘッダー (1行目) */
+      background-color: var(--clr-white);
+      background-image: linear-gradient(to right, rgba(255, 192, 203, 0.8), rgba(255, 192, 203, 0.8));
+      background-size: 10% 33px;
+      background-position: 50% 20%; 
+    }
+    .en-data-table-sp1 .en-dotted-line-row td {
+      border: none;
+      border-bottom: 2px dotted #aaa;
+      height: 10px;
+      padding: 5px 0;
+    }  
+
+    .en-data-table-sp1 .en-nintei-type {
+      background-size: 50% 30px;
+      background-position: 45% 15%;
+    }
+
+    .en-data-table-sp1 tfoot .en-capacity-subheader th {
+      background-size: 60% 25px;
+      background-position: 50% 50%;
+    }
+    .en-data-table-sp1 tfoot .en-capacity-subheader th:nth-of-type(2) {
+      background-image: none;
+    }
+
+  .en-data-table-sp2 th, .en-data-table-sp2 td {
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: var(--std-fz);
+    word-wrap: break-word;
+  }
+
+  .en-data-table-sp2 .en-header-spacer-cell {
+    background-color: var(--clr-white); /* 背景を白またはテーブル背景に合わせる */
+    background-image: none;
+    padding: 12px 10px; /* 高さを他のグループヘッダーと合わせる */
+}
+
+  .en-data-table-sp2 thead th { /* 通常のヘッダーセル (2行目) */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-size: 45% 25px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    font-weight: bold;
+  }
+  .en-data-table-sp2 thead th:nth-of-type(2) {
+    background-size: 50% 60px;
+  }
+  .en-data-table-sp2 thead th:nth-of-type(4) {
+    background-size: 45% 60px;
+  }
+
+  .en-data-table-sp2 .en-section-group-header { /* 「定員」「保育料」のグループヘッダー (1行目) */
+    background-color: var(--clr-white);
+    background-image: linear-gradient(to right, rgba(255, 192, 203, 0.8), rgba(255, 192, 203, 0.8));
+    background-size: 10% 33px;
+    background-position: 50% 20%; 
+  }
+
+  .en-data-table-sp2 .en-nintei-type {
+    background-size: 55% 30px;
+    background-position: 45% 10%;
+  }
+
+  .en-summary {
+    margin: var(--adj-80) var(--adj-10);
+  }
+
+  .en-summary-columns-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .en-summary-list {
+    padding-left: 0; /* スマホでは左パディング不要 */
+    margin-bottom: 30px;
+  }
+  .en-summary-list:last-child {
+    margin-bottom: 0;
+  }
+
+  .en-summary-list::before {
+    display: none; /* スマホでは縦線を消す */
+  }
+
+  .en-summary-list dt {
+    position: static; /* 絶対配置を解除 */
+    width: auto;      /* 幅を自動に */
+    text-align: left; /* 左揃えに戻す */
+    padding-bottom: 2px;
+  }
+
+  .en-summary-list dd {
+    padding-bottom: 10px;
+  }
+
+  .footer-content {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 0 10px;
+      }
+      .footer-logo {
+          height: 40px;
+          margin-right: 10px;
+      }
+      .footer-center {
+          font-size: 15px;
+          min-width: 0;
+          margin: 10px 0;
+          z-index: 2;
+      }
+      .footer-right {
+          justify-content: flex-start;
+          margin-top: 10px;
+      }
+      .children-illustration {
+          height: 70px;
+          width: auto;
+          min-width: unset;
+          max-width: unset;
+      }
+      .footer::after {
+        content: "";
+          position: absolute;
+          bottom: -76px;
+          right: -80px;
+          width: 111%;
+          height: 161%;
+          background: url(../img3/logo_kodomo_1_1.png) no-repeat bottom right;
+          background-size: contain;
+          z-index: 1;
+          pointer-events: none;
+          object-fit: cover;
+          object-position: center;
+        }
+}
+
+/* --------
+スマホ表示 
+-----------*/
+@media (max-width:480px) {
+  .header {
+    padding: 10px;
+    gap: 15px;
+}
+
+.logo-container {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.school-name {
+  margin-left: 0;
+}
+
+.school-name h2 {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.school-name h1 {
+    font-size: 22px;
+}
+
+.buttons {
+  flex-direction: column;
+  width: 54%;
+  gap: 8px;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  min-width: auto;
+  width: 100%;
+  max-width: 200px;
+}
+.btn:nth-of-type(1) {
+	font-size: 13px;
+	}
+
+ /* ハンバーガーメニューのサイズ調整 */
+ .hamburger {
+  width: 60px;
+  height: 60px;
+}
+
+.hamburger span {
+  width: 60px;
+  height: 4px;
+  background-color: #9b2226;
+}
+
+/* ナビゲーション */
+.navigation {
+  padding: 15px 0px;
+}
+
+.nav-item {
+  font-size: 18px;
+  padding: 12px 20px;
+}
+
+.en-main-visual-text {
+  top: 80%;
+}
+
+  .en-first-certification-title {
+    background-size: 120%;
+  }
+
+  .en-first-certification-title h3 {
+    background-size: 50% 50px;
+  }
+
+  .en-second-certification-title {
+    background-size: 120%;
+  }
+
+  .en-second-certification-title h3 {
+    background-size: 80% 50px;
+  }
+
+  .en-flow {
+    display: block;
+    width: 80%;
+    margin: var(--adj-30) auto;
+  }
+
+  .en-circle {
+    background-size: 75%;
+    background-position: 50% 50%;
+    margin: 40px auto;
+  }
+  .en-circle:nth-of-type(3) {
+    background-size: 75%;
+    background-position: 50% 50%;
+  }
+  .en-circle:nth-of-type(5) {   
+    background-size: 75%;
+    background-position: 50% 50%;
+  }
+  
+  .en-arrow {
+    background-size: 30%;
+    background-position: center;
+    rotate: 90deg;
+  }
+
+  .en-second-sub-text {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .en-note-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .en-data-table-sp1 .en-section-group-header { /* 「定員」「保育料」のグループヘッダー (1行目) */
+    background-size: 15% 30px; 
+  }
+
+  .en-data-table-sp1 .en-nintei-type {
+    background-size: 75% 30px;
+    background-position: 45% 10%;
+  }
+
+  .en-data-table-sp2 .en-section-group-header { /* 「定員」「保育料」のグループヘッダー (1行目) */
+    background-size: 15% 30px; 
+  }
+
+  .en-data-table-sp2 thead th { /* 通常のヘッダーセル (2行目) */
+    background-size: 60% 25px;
+    background-position: 50% 50%; 
+  }
+  .en-data-table-sp2 thead th:nth-of-type(2) {
+    background-size: 70% 60px;
+  }
+  .en-data-table-sp2 thead th:nth-of-type(4) {
+    background-size: 60% 60px;
+  }
+
+  .en-data-table-sp2 .en-nintei-type {
+    background-size: 80% 30px;
+    background-position: 45% 10%;
+  }
+
+  .footer-content {
+    padding: 0 3px;
+}
+.footer-logo {
+    height: 28px;
+    margin-right: 6px;
+}
+.footer-left span {
+    font-size: 16px !important;
+}
+.footer-center {
+    font-size: 11px;
+    margin: 6px 0;
+    background-color: var(--clr-white);
+    z-index: 2;
+}
+.children-illustration {
+    height: 40px;
+    width: auto;
+    min-width: unset;
+    max-width: unset;
+}
+.copyright {
+    font-size: 10px;
+}
+.footer::after {
+  content: "";
+    position: absolute;
+    bottom: -76px;
+    right: -60px;
+    width: 112%;
+    height: 138%;
+    background: url(../img3/logo_kodomo_1_1.png) no-repeat bottom right;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* ドット模様の作成 */
+.polka-dots::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    var(--clr-dec-line-03) 3px,
+    transparent 4px
+  );
+  background-size: 30px 30px;
+}
+
+
