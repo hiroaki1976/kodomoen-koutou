@@ -28,9 +28,9 @@ get_header();
                     // Display page content
                     ?>
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                        <header class="entry-header">
+                        <div class="entry-header">
                             <?php the_title( '<h1 class="entry-title">', '</h1>' ); // Page Title ?>
-                        </header><div class="entry-content">
+                        </div><div class="entry-content">
                             <?php
                             the_content(); // Page Content
 

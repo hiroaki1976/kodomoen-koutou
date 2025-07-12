@@ -24,7 +24,7 @@
     ?>
 
     <!-- カテゴリーヘッダー -->
-    <div class="category-header" style="margin-top: 180px; padding: 40px 0; text-align: center; background: #f8f9fa; border-radius: 8px; margin-bottom: 40px;">
+    <div class="category-header" style="margin-top: 180px; padding: 40px 0; text-align: center; border-radius: 8px; margin-bottom: 40px;">
         <h1 class="category-title" style="font-size: 36px; font-weight: bold; color: #333; margin-bottom: 15px;">
             <?php echo $category_name; ?>
         </h1>
@@ -100,7 +100,7 @@
                         
                         <div class="read-more" style="text-align: right;">
                             <a href="<?php the_permalink(); ?>" style="display: inline-block; padding: 8px 16px; background: #9b2226; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; transition: background 0.3s ease;">
-                                続きを読む →
+                                続きを読む >>
                             </a>
                         </div>
                     </div>
@@ -115,8 +115,8 @@
                 echo paginate_links(array(
                     'total' => $category_query->max_num_pages,
                     'current' => $paged,
-                    'prev_text' => '← 前のページ',
-                    'next_text' => '次のページ →',
+                    'prev_text' => '<< 前のページ',
+                    'next_text' => '次のページ >>',
                     'type' => 'list'
                 ));
                 ?>
@@ -139,7 +139,7 @@
     <!-- 戻るボタン -->
     <div class="back-to-top" style="text-align: center; margin: 40px 0;">
         <a href="<?php echo home_url(); ?>" style="display: inline-block; padding: 12px 24px; background: #6c757d; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background 0.3s ease;">
-            ← トップページに戻る
+            << トップページに戻る
         </a>
     </div>
 </div>

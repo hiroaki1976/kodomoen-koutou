@@ -25,6 +25,7 @@
         <div class="buttons">
           <a href="<?php echo home_url(); ?>?page_id=29" class="btn">COCOroom</a>
           <a href="<?php echo home_url(); ?>?page_id=27" class="btn">入園のご案内</a>
+		  <a href="<?php echo home_url(); ?>?page_id=103" class="btn">未就園児/子育て支援</a>
         </div>
       </header>
 

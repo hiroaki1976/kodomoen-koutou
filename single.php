@@ -46,15 +46,15 @@
             <div class="post-footer">
                 <div class="post-navigation">
                     <div class="nav-previous">
-                        <?php previous_post_link('%link', '← 前の記事: %title'); ?>
+                        <?php previous_post_link('%link', '<< 前の記事: %title'); ?>
                     </div>
                     <div class="nav-next">
-                        <?php next_post_link('%link', '次の記事: %title →'); ?>
+                        <?php next_post_link('%link', '次の記事: %title >>'); ?>
                     </div>
                 </div>
                 
                 <div class="back-to-top">
-                    <a href="<?php echo home_url(); ?>" class="back-link">← トップページに戻る</a>
+                    <a href="<?php echo home_url(); ?>" class="back-link"><< トップページに戻る</a>
                 </div>
             </div>
         </article>
