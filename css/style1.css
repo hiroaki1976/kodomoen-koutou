@@ -91,6 +91,24 @@ body {
   line-height: var(--std-lh);
 }
 
+/* ページ内リンクのずれを解消する */
+section::before {
+  content:'';
+  display: block;
+  padding-top: 180px;
+  margin-top: -180px;
+}
+
+#policy::before {
+  padding-top: 400px;
+  margin-top: -300px;
+}
+
+#principal-greeting::before {
+  padding-top: 400px;
+  margin-top: -250px;
+}
+
 /* ヘッダー */
 .top {
   position: fixed;
@@ -2343,6 +2361,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* ページ内リンクのずれを解消する */
+  #daily-life::before {
+    padding-top: 600px;
+    margin-top: -50px;
+  }
+
   .header {
     display: flex;
     align-items: center;
