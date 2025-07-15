@@ -17,7 +17,7 @@ get_header(); ?>
             <h2>児童発達支援施設</h2>
             <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
             <p>ココルーム</p>
-            <a href="#" class="cc-pamphlet-btn">パンフレットはこちら</a>
+            <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
         </div>
         <div class="cc-hero-right">
             <h2>どのお子さんも<br>お気軽にご相談ください</h2>
@@ -254,9 +254,9 @@ get_header(); ?>
                 <div class="cc-support-phone-icon">📞</div>
                 <div>011-598-9343</div>
             </div>
-            <button class="cc-support-cta-button">
-                保育所等訪問支援に関する<br>パンフレットはこちら
-            </button>
+            <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/houmon-shien.pdf" target="_blank" rel="noopener noreferrer" class="cc-support-cta-button">
+                保育所等訪問支援に関するパンフレットはこちら
+            </a>
         </div>
     </div>
 

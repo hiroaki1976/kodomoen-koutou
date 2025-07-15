@@ -89,7 +89,6 @@
 body {
   color: var(--std-clr);
   line-height: var(--std-lh);
-  overflow-x: hidden;
 }
 
 /* ヘッダー */
@@ -105,18 +104,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 10px 50px 0px 50px;
   background-color: white;
-  width: 100%;
 }
 .logo-container {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
+  gap: 20px;
   text-decoration: none;
   color: inherit;
   transition: opacity 0.3s ease;
@@ -129,23 +129,28 @@ body {
 .logo {
   width: 120px;
   height: auto;
+  flex-shrink: 0; /* ロゴのサイズを固定 */
 }
 
 .school-name {
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .school-name h2 {
   color: #888;
   font-weight: normal;
   font-size: 28.7px;
-  margin-bottom: 5px;
+  margin-bottom: -5px;
+  line-height: 1.2;
 }
 
 .school-name h1 {
   color: #9b2226;
   font-size: 39.4px;
   font-weight: bold;
+  line-height: 1.2;
 }
 
 .buttons {
@@ -1272,7 +1277,7 @@ body {
   bottom: 40px;
   right: 40px;
   color: #555;
-  font-size: 1.2rem;
+  font-size: 1.2rem;
   text-align: right;
   z-index: 3;
 }
@@ -2391,15 +2396,15 @@ body {
   .navigation {
     display: none;
     flex-direction: column;
-    position: relative;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 20px 0;
-    margin-top: 10px;
   }
-
   /* メニューがアクティブ時に表示 */
   .navigation.active {
     display: flex;
@@ -2782,34 +2787,31 @@ body {
   }
 
   .school-name {
-    margin-left: 0;
+    display: none;
   }
 
   .school-name h2 {
-    font-size: 15px;
+    font-size: 13px;
     margin-bottom: -13px;
   }
 
   .school-name h1 {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .buttons {
     flex-direction: column;
     width: 54%;
-    gap: 8px;
+    gap: 3px;
   }
 
   .btn {
-    font-size: 16px;
-    padding: 3px 42px;
+    font-size: 6px;
     min-width: auto;
     width: 100%;
+    text-align: center;
     max-width: 200px;
   }
-	.btn:nth-of-type(1) {
-		font-size: 13px;
-	}
 
   /* ハンバーガーメニューのサイズ調整 */
   .hamburger {
