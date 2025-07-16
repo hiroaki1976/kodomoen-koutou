@@ -1731,6 +1731,8 @@ section::before {
 #daily-life {
   position: relative;
   min-height: 800px;
+  padding-top: 120px; /* ページ内リンクのずれを解消する */
+  margin-top: -120px; /* ページ内リンクのずれを解消する */
 }
 
 #daily-life::before {
@@ -2361,13 +2363,7 @@ section::before {
 }
 
 @media (max-width: 768px) {
-  /* ページ内リンクのずれを解消する */
-  #daily-life::before {
-    padding-top: 600px;
-    margin-top: -50px;
-  }
-
-  .header {
+   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;

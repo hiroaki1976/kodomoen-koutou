@@ -450,7 +450,7 @@
     </section>
 
     <section id="daily-life">
-      <div class="daily-life-cover">
+      <div class="daily-life-cover fade-up">
         <img src="<?php echo get_template_directory_uri(); ?>/img/parts/daily-life-cover.png" alt="園の1日" />
         <h2 class="section-title">園の1日</h2>
 
