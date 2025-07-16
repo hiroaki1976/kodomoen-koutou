@@ -15,10 +15,47 @@
     ?>
 
     <!-- メインビジュアル -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <div class="main-visual fade-up">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/main-visual.jpg" alt="幼稚園のメインビジュアル" />
-      <div class="illustration-overlay">
-        <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+      <div class="swiper main-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top1.jpg" alt="メインビジュアル1" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top2.jpg" alt="メインビジュアル2" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top3.jpg" alt="メインビジュアル3" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top4.jpg" alt="メインビジュアル4" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top5.jpg" alt="メインビジュアル5" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+        </div>
+        <!-- ナビゲーションボタン -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- ページネーション -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
@@ -662,3 +699,29 @@
     </section>
 
     <?php get_footer(); ?>
+<!-- Swiper JS（フッター直前などでOK） -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mainSwiper = new Swiper('.main-swiper', {
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+    speed: 2000,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    },
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+  });
+});
+</script>
