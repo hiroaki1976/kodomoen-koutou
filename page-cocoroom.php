@@ -10,18 +10,68 @@ get_header(); ?>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bokutachi+no+Gothic+2:wght@400;700&display=swap" rel="stylesheet">
 
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <!-- ヒーロー部分 -->
 <section class="cc-hero fade-up">
-    <div class="cc-hero-content">
-        <div class="cc-hero-left">
-            <h2>児童発達支援施設</h2>
-            <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
-            <p>ココルーム</p>
-            <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
-        </div>
-        <div class="cc-hero-right">
-            <h2>どのお子さんも<br>お気軽にご相談ください</h2>
-            <p>お子さんがより安心して楽しく成長できるよう<br>一緒に取り組んでまいります</p>
+    <div class="cc-hero-slider">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="cc-hero-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img3/TOP1.jpg');">
+                        <div class="cc-hero-content">
+                            <div class="cc-hero-left">
+                                <h2>児童発達支援施設</h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
+                                <p>ココルーム</p>
+                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
+                            </div>
+                            <div class="cc-hero-right">
+                                <h2>どのお子さんも<br>お気軽にご相談ください</h2>
+                                <p>お子さんがより安心して楽しく成長できるよう<br>一緒に取り組んでまいります</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="cc-hero-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img3/TOP2.jpg');">
+                        <div class="cc-hero-content">
+                            <div class="cc-hero-left">
+                                <h2>児童発達支援施設</h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
+                                <p>ココルーム</p>
+                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
+                            </div>
+                            <div class="cc-hero-right">
+                                <h2>専門的な支援で<br>お子さんの成長をサポート</h2>
+                                <p>言語聴覚士・作業療法士・音楽療法士など<br>専門家が多角的にアプローチします</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="cc-hero-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img3/TOP3.jpg');">
+                        <div class="cc-hero-content">
+                            <div class="cc-hero-left">
+                                <h2>児童発達支援施設</h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
+                                <p>ココルーム</p>
+                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
+                            </div>
+                            <div class="cc-hero-right">
+                                <h2>インクルーシブ教育で<br>みんなで一緒に成長</h2>
+                                <p>認定こども園と併設だから<br>自然な交流を通じて多様な成長を経験できます</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ナビゲーションボタン -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- ページネーション -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </section>
@@ -264,5 +314,158 @@ get_header(); ?>
         <img src="<?php echo get_template_directory_uri(); ?>/img3/PXL_20241016_050550057.jpg" alt="">
     </div>
 </div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Swiper.js の初期化
+    const heroSwiper = new Swiper('.hero-swiper', {
+        // 基本設定
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        loop: true,
+        
+        // ナビゲーション
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+        // ページネーション
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        
+        // レスポンシブ設定
+        breakpoints: {
+            768: {
+                navigation: {
+                    enabled: false
+                },
+                pagination: {
+                    enabled: true
+                }
+            }
+        },
+        
+        // イベント
+        on: {
+            slideChange: function () {
+                // スライド変更時のアニメーションリセット
+                const activeSlide = this.slides[this.activeIndex];
+                const elements = activeSlide.querySelectorAll('.cc-hero-left h2, .cc-hero-logo, .cc-hero-left p, .cc-pamphlet-btn, .cc-hero-right h2, .cc-hero-right p');
+                
+                elements.forEach(element => {
+                    element.style.animation = 'none';
+                    element.offsetHeight; // リフロー
+                    element.style.animation = null;
+                });
+            }
+        }
+    });
+    
+    // パララックス効果（参考サイト風）
+    const heroSection = document.querySelector('.cc-hero');
+    if (heroSection) {
+        let isMouseMoving = false;
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // マウス移動の追跡
+        heroSection.addEventListener('mousemove', function(e) {
+            isMouseMoving = true;
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            requestAnimationFrame(updateParallax);
+        });
+        
+        // マウスが離れた時のリセット
+        heroSection.addEventListener('mouseleave', function() {
+            isMouseMoving = false;
+            resetParallax();
+        });
+        
+        // パララックス効果の更新
+        function updateParallax() {
+            if (!isMouseMoving) return;
+            
+            const activeSlide = heroSwiper.slides[heroSwiper.activeIndex];
+            if (!activeSlide) return;
+            
+            const rect = heroSection.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            // マウス位置を-1から1の範囲に正規化
+            const normalizedX = (mouseX - centerX) / (rect.width / 2);
+            const normalizedY = (mouseY - centerY) / (rect.height / 2);
+            
+            // 背景画像のパララックス効果
+            const slideElement = activeSlide.querySelector('.cc-hero-slide');
+            if (slideElement) {
+                const bgX = normalizedX * 20;
+                const bgY = normalizedY * 20;
+                slideElement.style.transform = `translate3d(${bgX}px, ${bgY}px, 0) scale(1.1)`;
+            }
+            
+            // 左側コンテンツのパララックス効果
+            const leftContent = activeSlide.querySelector('.cc-hero-left');
+            if (leftContent) {
+                const leftX = normalizedX * -15;
+                const leftY = normalizedY * -10;
+                leftContent.style.transform = `translate3d(${leftX}px, ${leftY}px, 0)`;
+            }
+            
+            // 右側コンテンツのパララックス効果
+            const rightContent = activeSlide.querySelector('.cc-hero-right');
+            if (rightContent) {
+                const rightX = normalizedX * 15;
+                const rightY = normalizedY * -10;
+                rightContent.style.transform = `translate3d(${rightX}px, ${rightY}px, 0)`;
+            }
+            
+            // ロゴのパララックス効果
+            const logo = activeSlide.querySelector('.cc-hero-logo');
+            if (logo) {
+                const logoX = normalizedX * 8;
+                const logoY = normalizedY * 8;
+                logo.style.transform = `translate3d(${logoX}px, ${logoY}px, 0)`;
+            }
+        }
+        
+        // パララックス効果のリセット
+        function resetParallax() {
+            const activeSlide = heroSwiper.slides[heroSwiper.activeIndex];
+            if (!activeSlide) return;
+            
+            const elements = [
+                activeSlide.querySelector('.cc-hero-slide'),
+                activeSlide.querySelector('.cc-hero-left'),
+                activeSlide.querySelector('.cc-hero-right'),
+                activeSlide.querySelector('.cc-hero-logo')
+            ];
+            
+            elements.forEach(element => {
+                if (element) {
+                    element.style.transform = 'translate3d(0, 0, 0) scale(1)';
+                }
+            });
+        }
+    }
+});
+</script>
 
 <?php get_footer(); ?> 

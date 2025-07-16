@@ -125,14 +125,163 @@ body {
     position: relative;
     height: 700px;
     width: 100%;
-    background-image: url('../img3/topimg.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     padding: 0;
     margin-top: 200px;
     /* margin: 0; */
+}
+
+.cc-hero-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.cc-hero-slide {
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+.cc-hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.cc-hero-slide .cc-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Swiper.js カスタムスタイル */
+.cc-hero .swiper {
+    height: 100%;
+    width: 100%;
+}
+
+.cc-hero .swiper-wrapper {
+    height: 100%;
+}
+
+.cc-hero .swiper-slide {
+    height: 100%;
+}
+
+/* スライダーの矢印ボタン */
+.cc-hero .swiper-button-next,
+.cc-hero .swiper-button-prev {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.cc-hero .swiper-button-next:hover,
+.cc-hero .swiper-button-prev:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+
+.cc-hero .swiper-button-next::after,
+.cc-hero .swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* スライダーのページネーション */
+.cc-hero .swiper-pagination {
+    bottom: 20px;
+}
+
+.cc-hero .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.cc-hero .swiper-pagination-bullet-active {
+    background: #ffc107;
+    border-color: #ffc107;
+    transform: scale(1.2);
+}
+
+/* スライドアニメーション効果 */
+.cc-hero .swiper-slide-active .cc-hero-left h2 {
+    animation: slideInLeft 1s ease-out;
+}
+
+.cc-hero .swiper-slide-active .cc-hero-logo {
+    animation: slideInUp 1s ease-out 0.3s both;
+}
+
+.cc-hero .swiper-slide-active .cc-hero-left p {
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.cc-hero .swiper-slide-active .cc-pamphlet-btn {
+    animation: slideInUp 1s ease-out 0.9s both;
+}
+
+.cc-hero .swiper-slide-active .cc-hero-right h2 {
+    animation: slideInRight 1s ease-out 0.3s both;
+}
+
+.cc-hero .swiper-slide-active .cc-hero-right p {
+    animation: slideInRight 1s ease-out 0.6s both;
+}
+
+/* アニメーションキーフレーム */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .cc-hero-content {
@@ -148,6 +297,8 @@ body {
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
     text-align: center;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
 }
 
 .cc-hero-left h2 {
@@ -186,6 +337,8 @@ body {
     color: white;
     text-align: right;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+    will-change: transform;
+    transition: transform 0.1s ease-out;
 }
 
 .cc-hero-right h2 {
@@ -1101,8 +1254,19 @@ body {
   /* ヒーローセクション */
   .cc-hero {
     height: auto;
-    min-height: 400px;
+    min-height: 520px;
     padding: 40px 0;
+  }
+  
+  .cc-hero-slide {
+    height: 520px;
+    min-height: 520px;
+  }
+  
+  /* モバイル用のナビゲーションボタンを非表示 */
+  .cc-hero .swiper-button-next,
+  .cc-hero .swiper-button-prev {
+    display: none;
   }
   
   .cc-hero-content {
@@ -1126,7 +1290,9 @@ body {
   .cc-hero-logo {
     width: 250px;
     margin: 15px 0;
-  }
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
   
   .cc-hero-left p {
     font-size: 20px;
@@ -1405,8 +1571,13 @@ body {
 @media (max-width: 480px) {  
   /* ヒーロー */
   .cc-hero {
-      min-height: 350px;
+      min-height: 420px;
       padding: 30px 0;
+  }
+  
+  .cc-hero-slide {
+      height: 420px;
+      min-height: 420px;
   }
   
   .cc-hero-content {
