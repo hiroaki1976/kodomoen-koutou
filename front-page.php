@@ -357,7 +357,7 @@
                   />
                 </div>
                 <div class="activity-photo2">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/feature-english-left.jpg" alt="英語あそび2" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/feature-english-left2.jpeg" alt="英語あそび2" />
                 </div>
                 <div class="activity-description">
                   <p>ECCジュニア英会話教室</p>

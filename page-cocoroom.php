@@ -55,7 +55,7 @@ get_header(); ?>
                         <div class="cc-hero-content">
                             <div class="cc-hero-left">
                                 <h2>児童発達支援施設</h2>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
                                 <p>ココルーム</p>
                                 <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
                             </div>
@@ -263,9 +263,9 @@ get_header(); ?>
     </div>
 
     <div class="cc-photo-gallery">
-        <div class="cc-photo-item fade-up"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc_left.jpg" alt=""></div>
-        <div class="cc-photo-item fade-up-2"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-center.jpg" alt=""></div>
-        <div class="cc-photo-item fade-up-3"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc_right.jpg" alt=""></div>
+        <div class="cc-photo-item fade-up"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-left2.jpg" alt=""></div>
+        <div class="cc-photo-item fade-up-2"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-center2.jpg" alt=""></div>
+        <div class="cc-photo-item fade-up-3"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-right2.jpg" alt=""></div>
     </div>
 </div>
 
@@ -311,9 +311,11 @@ get_header(); ?>
     </div>
 
     <div class="cc-image-section fade-up">
-        <img src="<?php echo get_template_directory_uri(); ?>/img3/PXL_20241016_050550057.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/img3/under-part.jpg" alt="">
     </div>
 </div>
+
+<?php get_footer(); ?>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -327,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeEffect: {
             crossFade: true
         },
-        speed: 1000,
+        speed: 100,
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
@@ -358,114 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     enabled: true
                 }
             }
-        },
-        
-        // イベント
-        on: {
-            slideChange: function () {
-                // スライド変更時のアニメーションリセット
-                const activeSlide = this.slides[this.activeIndex];
-                const elements = activeSlide.querySelectorAll('.cc-hero-left h2, .cc-hero-logo, .cc-hero-left p, .cc-pamphlet-btn, .cc-hero-right h2, .cc-hero-right p');
-                
-                elements.forEach(element => {
-                    element.style.animation = 'none';
-                    element.offsetHeight; // リフロー
-                    element.style.animation = null;
-                });
-            }
         }
     });
-    
-    // パララックス効果（参考サイト風）
-    const heroSection = document.querySelector('.cc-hero');
-    if (heroSection) {
-        let isMouseMoving = false;
-        let mouseX = 0;
-        let mouseY = 0;
-        
-        // マウス移動の追跡
-        heroSection.addEventListener('mousemove', function(e) {
-            isMouseMoving = true;
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            
-            requestAnimationFrame(updateParallax);
-        });
-        
-        // マウスが離れた時のリセット
-        heroSection.addEventListener('mouseleave', function() {
-            isMouseMoving = false;
-            resetParallax();
-        });
-        
-        // パララックス効果の更新
-        function updateParallax() {
-            if (!isMouseMoving) return;
-            
-            const activeSlide = heroSwiper.slides[heroSwiper.activeIndex];
-            if (!activeSlide) return;
-            
-            const rect = heroSection.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-            
-            // マウス位置を-1から1の範囲に正規化
-            const normalizedX = (mouseX - centerX) / (rect.width / 2);
-            const normalizedY = (mouseY - centerY) / (rect.height / 2);
-            
-            // 背景画像のパララックス効果
-            const slideElement = activeSlide.querySelector('.cc-hero-slide');
-            if (slideElement) {
-                const bgX = normalizedX * 20;
-                const bgY = normalizedY * 20;
-                slideElement.style.transform = `translate3d(${bgX}px, ${bgY}px, 0) scale(1.1)`;
-            }
-            
-            // 左側コンテンツのパララックス効果
-            const leftContent = activeSlide.querySelector('.cc-hero-left');
-            if (leftContent) {
-                const leftX = normalizedX * -15;
-                const leftY = normalizedY * -10;
-                leftContent.style.transform = `translate3d(${leftX}px, ${leftY}px, 0)`;
-            }
-            
-            // 右側コンテンツのパララックス効果
-            const rightContent = activeSlide.querySelector('.cc-hero-right');
-            if (rightContent) {
-                const rightX = normalizedX * 15;
-                const rightY = normalizedY * -10;
-                rightContent.style.transform = `translate3d(${rightX}px, ${rightY}px, 0)`;
-            }
-            
-            // ロゴのパララックス効果
-            const logo = activeSlide.querySelector('.cc-hero-logo');
-            if (logo) {
-                const logoX = normalizedX * 8;
-                const logoY = normalizedY * 8;
-                logo.style.transform = `translate3d(${logoX}px, ${logoY}px, 0)`;
-            }
-        }
-        
-        // パララックス効果のリセット
-        function resetParallax() {
-            const activeSlide = heroSwiper.slides[heroSwiper.activeIndex];
-            if (!activeSlide) return;
-            
-            const elements = [
-                activeSlide.querySelector('.cc-hero-slide'),
-                activeSlide.querySelector('.cc-hero-left'),
-                activeSlide.querySelector('.cc-hero-right'),
-                activeSlide.querySelector('.cc-hero-logo')
-            ];
-            
-            elements.forEach(element => {
-                if (element) {
-                    element.style.transform = 'translate3d(0, 0, 0) scale(1)';
-                }
-            });
-        }
-    }
 });
 </script>
-
-<?php get_footer(); ?> 

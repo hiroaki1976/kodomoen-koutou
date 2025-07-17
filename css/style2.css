@@ -122,10 +122,10 @@ body {
 .en-main-visual {
   position: relative;
   width: 100%;
-  height: 0;
+  height: 600px;
   /* padding-top: 56.25%; 16:9のアスペクト比 */
-  padding-top: 45%;
-  margin: 0 auto;
+  padding-top: -65px;
+  margin: -65px auto 0;
 }
 
 .en-main-visual img {
@@ -906,6 +906,12 @@ content: "";
 スマホ表示 
 -----------*/
 @media (max-width:480px) {
+  .en-main-visual {
+    height: 500px;
+    padding-top: -160px;
+    margin: -160px auto 0;
+  }
+
   .en-main-visual-text {
     top: 80%;
   }
