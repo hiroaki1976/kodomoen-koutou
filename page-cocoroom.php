@@ -20,7 +20,7 @@ get_header(); ?>
                         <div class="cc-hero-content">
                             <div class="cc-hero-left">
                                 <h2>児童発達支援施設</h2>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo">
                                 <p>ココルーム</p>
                                 <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
                             </div>
@@ -36,7 +36,7 @@ get_header(); ?>
                         <div class="cc-hero-content">
                             <div class="cc-hero-left">
                                 <h2>児童発達支援施設</h2>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo">
                                 <p>ココルーム</p>
                                 <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
                             </div>
@@ -52,7 +52,7 @@ get_header(); ?>
                         <div class="cc-hero-content">
                             <div class="cc-hero-left">
                                 <h2>児童発達支援施設</h2>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img3/logo_coco_1_1.png" alt="COCOroom Logo" class="cc-hero-logo">
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo">
                                 <p>ココルーム</p>
                                 <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
                             </div>
@@ -260,7 +260,7 @@ get_header(); ?>
     </div>
 
     <div class="cc-photo-gallery">
-        <div class="cc-photo-item fade-up"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-left2.jpg" alt=""></div>
+        <div class="cc-photo-item fade-up"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-left3.jpeg" alt=""></div>
         <div class="cc-photo-item fade-up-2"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-center2.jpg" alt=""></div>
         <div class="cc-photo-item fade-up-3"><img src="<?php echo get_template_directory_uri(); ?>/img3/cc-right2.jpg" alt=""></div>
     </div>

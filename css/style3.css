@@ -125,8 +125,8 @@ body {
     position: relative;
     height: 800px;
     width: 100%;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     padding: 90px 0 0 0;
     margin-top: 90px;
 }
@@ -141,20 +141,9 @@ body {
     width: 100%;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     position: relative;
-}
-
-.cc-hero-slide::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
 }
 
 .cc-hero-slide .cc-hero-content {
@@ -236,14 +225,14 @@ body {
     transform: scale(1.2);
 }
 
-.cc-hero-content {
+/* .cc-hero-content {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 50px;
-}
+} */
 
 .cc-hero-left {
     color: white;
@@ -257,25 +246,26 @@ body {
     margin-bottom: 10px;
 }
 
-.cc-hero-left h1 {
+/* .cc-hero-left h1 {
     font-size: 72px;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: lowercase;
     font-family: 'JampyonMaru', sans-serif;
-}
+} */
 
 .cc-hero-left p {
     font-size: 25.3px;
     margin-bottom: 30px;
-    /* margin-left: 10px; */
     text-align: center;
 }
 
-.cc-hero-logo {
-    width: 120px;
+/* 反応した */
+.cc-hero-left img {
+    width: 600px;
     height: auto;
-    margin: 15px 0;
+    margin: 15px auto;
+    display: block;
 }
 
 .cc-pamphlet-btn {
@@ -1210,13 +1200,13 @@ body {
   /* ヒーローセクション */
   .cc-hero {
     height: auto;
-    min-height: 520px;
+    min-height: 650px;
     padding: 40px 0;
   }
   
   .cc-hero-slide {
-    height: 520px;
-    min-height: 520px;
+    height: 650px;
+    min-height: 650px;
   }
 
   .cc-hero-slide .cc-hero-content {
@@ -1231,30 +1221,36 @@ body {
   
   .cc-hero-content {
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     text-align: center;
-    padding: 0 15px;
+    padding: 15px 15px;
     height: 100%;
     justify-content: center;
     align-items: center;
   }
   
-  .cc-hero-left, 
+  .cc-hero-left {
+    text-align: center;
+    margin: 50px 0 -50px 0;
+    flex: none;
+  }
+
   .cc-hero-right {
     text-align: center;
-    margin: 0;
+    margin: 0 0 50px 0;
     flex: none;
   }
   
   .cc-hero-left h2 {
     font-size: 24px;
   }
-  
-  .cc-hero-logo {
-    width: 60px;
+
+  .cc-hero-left img {
+    width: 400px;
     height: auto;
-    margin: 15px 0;
-}
+    margin: 15px auto;
+    display: block;
+  }
   
   .cc-hero-left p {
     font-size: 20px;
@@ -1263,7 +1259,7 @@ body {
   
   .cc-hero-right h2 {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   
   .cc-hero-right p {
@@ -1529,15 +1525,13 @@ body {
 @media (max-width: 480px) {  
   /* ヒーロー */
   .cc-hero {
-      min-height: 420px;
-      padding: 30px 0;
-      margin-top: 0;
-      padding-top: 0;
-  }
+      min-height: 500px;
+      padding: 20px 0 30px 0;
+  } 
   
   .cc-hero-slide {
-      height: 420px;
-      min-height: 420px;
+      height: 500px;
+      min-height: 500px;
   }
   
   .cc-hero-content {
@@ -1549,8 +1543,8 @@ body {
       font-size: 18px;
   }
   
-  .cc-hero-logo {
-      width: 200px;
+  .cc-hero-left img {
+      width: 300px;
   }
   
   .cc-hero-left p {
