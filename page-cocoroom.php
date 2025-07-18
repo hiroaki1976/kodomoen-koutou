@@ -10,9 +10,6 @@ get_header(); ?>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bokutachi+no+Gothic+2:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <!-- ヒーロー部分 -->
 <section class="cc-hero fade-up">
     <div class="cc-hero-slider">
