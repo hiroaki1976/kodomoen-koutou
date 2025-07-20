@@ -17,7 +17,7 @@
     <!-- メインビジュアル -->
     <!-- Swiper CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-    <div class="main-visual fade-up">
+    <div class="main-visual">
       <div class="swiper main-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -704,11 +704,10 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mainSwiper = new Swiper('.main-swiper', {
-    effect: 'fade',
-    fadeEffect: { crossFade: true },
+    effect: 'slide',
     speed: 2000,
     autoplay: {
-      delay: 4000,
+      delay: 3500,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },
@@ -722,6 +721,89 @@ document.addEventListener('DOMContentLoaded', function() {
       clickable: true,
       dynamicBullets: true,
     },
+    breakpoints: {
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: false,
+      },
+      1024: {
+        slidesPerView: 1.8,
+        spaceBetween: 80,
+        centeredSlides: true,
+      }
+    },
+    
+    // スライド変更時のイベント
+    on: {
+      slideChange: function () {
+        // すべてのスライドの文字を非表示
+        const allSlides = this.slides;
+        allSlides.forEach(slide => {
+          const text = slide.querySelector('.main-visual-text');
+          if (text) {
+            text.style.opacity = '0';
+          }
+        });
+        
+        // アクティブスライドの文字のみ表示（デスクトップのみ）
+        if (window.innerWidth >= 1024) {
+          const activeSlide = this.slides[this.activeIndex];
+          const activeText = activeSlide.querySelector('.main-visual-text');
+          if (activeText) {
+            setTimeout(() => {
+              activeText.style.opacity = '1';
+            }, 300);
+          }
+        } else {
+          // モバイル・タブレットでは全スライドの文字を表示
+          allSlides.forEach(slide => {
+            const text = slide.querySelector('.main-visual-text');
+            if (text) {
+              text.style.opacity = '1';
+            }
+          });
+        }
+      },
+      
+      // リサイズ時の処理
+      resize: function () {
+        if (window.innerWidth >= 1024) {
+          // デスクトップではアクティブスライドのみ表示
+          const allSlides = this.slides;
+          allSlides.forEach(slide => {
+            const text = slide.querySelector('.main-visual-text');
+            if (text) {
+              text.style.opacity = '0';
+            }
+          });
+          
+          const activeSlide = this.slides[this.activeIndex];
+          const activeText = activeSlide.querySelector('.main-visual-text');
+          if (activeText) {
+            activeText.style.opacity = '1';
+          }
+        } else {
+          // モバイル・タブレットでは全スライドの文字を表示
+          const allSlides = this.slides;
+          allSlides.forEach(slide => {
+            const text = slide.querySelector('.main-visual-text');
+            if (text) {
+              text.style.opacity = '1';
+            }
+          });
+        }
+      }
+    }
   });
+  
+  // 初期スライドの文字を表示
+  setTimeout(() => {
+    const firstSlide = mainSwiper.slides[0];
+    const firstText = firstSlide.querySelector('.main-visual-text');
+    if (firstText) {
+      firstText.style.opacity = '1';
+    }
+  }, 500);
 });
 </script>

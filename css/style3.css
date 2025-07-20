@@ -156,19 +156,40 @@ body {
     justify-content: space-between; /* 左右に配置 */
     align-items: center; /* 垂直中央に配置 */
     padding: 0 50px; /* 元々あった padding はここに移動 */
-    z-index: 2; /* 黒いオーバーレイ (.cc-hero-slide::before) よりも高い z-index を設定 */
     box-sizing: border-box; /* paddingを含めてwidth/heightを計算 */
 }
 
 /* Swiper.js カスタムスタイル */
-/* Swiperが設定するz-indexと競合する場合に備えて、明示的に指定 */
-.swiper-slide-active .cc-hero-content {
-    z-index: 10; /* アクティブなスライドのコンテンツを最前面に持ってくる */
-}
-
 .cc-hero .swiper {
     height: 100%;
     width: 100%;
+}
+
+/* ヒーローアニメーション用スタイル */
+.hero-animate-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.hero-animate-logo {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease 0.2s;
+}
+
+.hero-animate-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.4s;
+}
+
+/* アクティブスライドのアニメーション */
+.swiper-slide-active .hero-animate-text,
+.swiper-slide-active .hero-animate-logo,
+.swiper-slide-active .hero-animate-btn {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .cc-hero .swiper-wrapper {
@@ -182,6 +203,7 @@ body {
 /* スライダーの矢印ボタン */
 .cc-hero .swiper-button-next,
 .cc-hero .swiper-button-prev {
+    display: flex;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     width: 50px;
@@ -189,6 +211,7 @@ body {
     opacity: 0.8;
     transition: all 0.3s ease;
     color: #333;
+    z-index: 10;
 }
 
 .cc-hero .swiper-button-next:hover,
@@ -260,7 +283,6 @@ body {
     text-align: center;
 }
 
-/* 反応した */
 .cc-hero-left img {
     width: 600px;
     height: auto;
@@ -1565,6 +1587,8 @@ body {
   .cc-hero-right p {
       font-size: 14px;
   }
+  
+
   
   /* 施設紹介 */
   .cc-container {

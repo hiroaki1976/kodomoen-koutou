@@ -321,8 +321,13 @@ section::before {
   margin-top: 80px;
   padding-top: 80px;
 }
-.main-swiper, .swiper-wrapper, .swiper-slide {
+.main-swiper, .swiper-wrapper {
   height: 100%;
+}
+.swiper-slide {
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .swiper-slide {
   position: relative;
@@ -348,6 +353,27 @@ section::before {
   pointer-events: none;
   max-width: 48vw;
   padding-right: 6vw;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* アクティブスライドの文字のみ表示（デスクトップのみ） */
+@media (min-width: 1024px) {
+  .swiper-slide-active .main-visual-text {
+    opacity: 1;
+  }
+  
+  /* 非アクティブスライドの文字は非表示 */
+  .swiper-slide:not(.swiper-slide-active) .main-visual-text {
+    opacity: 0 !important;
+  }
+}
+
+/* モバイル・タブレットでは全スライドの文字を表示 */
+@media (max-width: 1023px) {
+  .main-visual-text {
+    opacity: 1 !important;
+  }
 }
 .swiper-slide img {
   width: 100%;
@@ -355,6 +381,53 @@ section::before {
   object-fit: cover;
   object-position: top;
   display: block;
+}
+
+/* スライダーのナビゲーションボタン */
+.main-swiper .swiper-button-next,
+.main-swiper .swiper-button-prev {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  color: #333;
+  z-index: 10;
+}
+
+.main-swiper .swiper-button-next:hover,
+.main-swiper .swiper-button-prev:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+
+.main-swiper .swiper-button-next::after,
+.main-swiper .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* スライダーのページネーション */
+.main-swiper .swiper-pagination {
+  bottom: 20px;
+}
+
+.main-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.main-swiper .swiper-pagination-bullet-active {
+  background: #ffc107;
+  border-color: #ffc107;
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
@@ -370,6 +443,17 @@ section::before {
     align-items: center;
     justify-content: flex-end;
   }
+  
+  /* モバイル用のナビゲーションボタンを非表示 */
+  .main-swiper .swiper-button-next,
+  .main-swiper .swiper-button-prev {
+    display: none;
+  }
+  
+  /* モバイルではスライドの角丸を削除 */
+  .swiper-slide {
+    border-radius: 0;
+  }
 }
 @media (max-width: 480px) {
   .main-visual {
@@ -384,6 +468,17 @@ section::before {
   .illustration-overlay {
     align-items: center;
     justify-content: flex-end;
+  }
+  
+  /* スマホではスライドの角丸を削除 */
+  .swiper-slide {
+    border-radius: 0;
+  }
+  
+  /* スマホではナビゲーションボタンを非表示 */
+  .main-swiper .swiper-button-next,
+  .main-swiper .swiper-button-prev {
+    display: none;
   }
 }
 

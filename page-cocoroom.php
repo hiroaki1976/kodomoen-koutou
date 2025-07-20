@@ -11,7 +11,7 @@ get_header(); ?>
 <link href="https://fonts.googleapis.com/css2?family=Bokutachi+no+Gothic+2:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- ヒーロー部分 -->
-<section class="cc-hero fade-up">
+<section class="cc-hero">
     <div class="cc-hero-slider">
         <div class="swiper hero-swiper">
             <div class="swiper-wrapper">
@@ -19,14 +19,14 @@ get_header(); ?>
                     <div class="cc-hero-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img3/TOP1.jpg');">
                         <div class="cc-hero-content">
                             <div class="cc-hero-left">
-                                <h2>児童発達支援施設</h2>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo">
-                                <p>ココルーム</p>
-                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
+                                <h2 class="hero-animate-text">児童発達支援施設</h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo hero-animate-logo">
+                                <p class="hero-animate-text">ココルーム</p>
+                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn hero-animate-btn">パンフレットはこちら</a>
                             </div>
                             <div class="cc-hero-right">
-                                <h2>どのお子さんも<br>お気軽にご相談ください</h2>
-                                <p>お子さんがより安心して楽しく成長できるよう<br>一緒に取り組んでまいります</p>
+                                <h2 class="hero-animate-text">どのお子さんも<br>お気軽にご相談ください</h2>
+                                <p class="hero-animate-text">お子さんがより安心して楽しく成長できるよう<br>一緒に取り組んでまいります</p>
                             </div>
                         </div>
                     </div>
@@ -35,14 +35,14 @@ get_header(); ?>
                     <div class="cc-hero-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img3/TOP2.jpg');">
                         <div class="cc-hero-content">
                             <div class="cc-hero-left">
-                                <h2>児童発達支援施設</h2>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo">
-                                <p>ココルーム</p>
-                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
+                                <h2 class="hero-animate-text">児童発達支援施設</h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo hero-animate-logo">
+                                <p class="hero-animate-text">ココルーム</p>
+                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn hero-animate-btn">パンフレットはこちら</a>
                             </div>
                             <div class="cc-hero-right">
-                                <h2>専門的な支援で<br>お子さんの成長をサポート</h2>
-                                <p>言語聴覚士・作業療法士・音楽療法士など<br>専門家が多角的にアプローチします</p>
+                                <h2 class="hero-animate-text">専門的な支援で<br>お子さんの成長をサポート</h2>
+                                <p class="hero-animate-text">言語聴覚士・作業療法士・音楽療法士など<br>専門家が多角的にアプローチします</p>
                             </div>
                         </div>
                     </div>
@@ -51,14 +51,14 @@ get_header(); ?>
                     <div class="cc-hero-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img3/TOP3.jpg');">
                         <div class="cc-hero-content">
                             <div class="cc-hero-left">
-                                <h2>児童発達支援施設</h2>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo">
-                                <p>ココルーム</p>
-                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn">パンフレットはこちら</a>
+                                <h2 class="hero-animate-text">児童発達支援施設</h2>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img3/coco-logo.png" alt="COCOroom Logo" class="cc-hero-logo hero-animate-logo">
+                                <p class="hero-animate-text">ココルーム</p>
+                                <a href="https://ninteikodomoen-koutou.jp/wp-content/uploads/2025/07/cocoroom-pamphlet.pdf" target="_blank" rel="noopener noreferrer" class="cc-pamphlet-btn hero-animate-btn">パンフレットはこちら</a>
                             </div>
                             <div class="cc-hero-right">
-                                <h2>インクルーシブ教育で<br>みんなで一緒に成長</h2>
-                                <p>認定こども園と併設だから<br>自然な交流を通じて多様な成長を経験できます</p>
+                                <h2 class="hero-animate-text">インクルーシブ教育で<br>みんなで一緒に成長</h2>
+                                <p class="hero-animate-text">認定こども園と併設だから<br>自然な交流を通じて多様な成長を経験できます</p>
                             </div>
                         </div>
                     </div>
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeEffect: {
             crossFade: true
         },
-        speed: 100,
+        speed: 2000,
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
@@ -349,6 +349,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // レスポンシブ設定
         breakpoints: {
+            769: {
+                navigation: {
+                    enabled: true
+                },
+                pagination: {
+                    enabled: true
+                }
+            },
             768: {
                 navigation: {
                     enabled: false
@@ -357,7 +365,56 @@ document.addEventListener('DOMContentLoaded', function() {
                     enabled: true
                 }
             }
+        },
+        
+        // スライド変更時のアニメーション
+        on: {
+            slideChange: function () {
+                // 現在のスライドのアニメーション要素をリセット
+                const activeSlide = this.slides[this.activeIndex];
+                const animateElements = activeSlide.querySelectorAll('.hero-animate-text, .hero-animate-logo, .hero-animate-btn');
+                
+                animateElements.forEach(element => {
+                    element.style.opacity = '0';
+                    if (element.classList.contains('hero-animate-logo')) {
+                        element.style.transform = 'scale(0.8)';
+                    } else {
+                        element.style.transform = 'translateY(30px)';
+                    }
+                });
+                
+                // 少し遅延してからアニメーション開始
+                setTimeout(() => {
+                    animateElements.forEach((element, index) => {
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            if (element.classList.contains('hero-animate-logo')) {
+                                element.style.transform = 'scale(1)';
+                            } else {
+                                element.style.transform = 'translateY(0)';
+                            }
+                        }, index * 200); // 各要素を200msずつ遅延
+                    });
+                }, 300);
+            }
         }
     });
+    
+    // 初期スライドのアニメーション
+    setTimeout(() => {
+        const firstSlide = heroSwiper.slides[0];
+        const animateElements = firstSlide.querySelectorAll('.hero-animate-text, .hero-animate-logo, .hero-animate-btn');
+        
+        animateElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.opacity = '1';
+                if (element.classList.contains('hero-animate-logo')) {
+                    element.style.transform = 'scale(1)';
+                } else {
+                    element.style.transform = 'translateY(0)';
+                }
+            }, index * 200);
+        });
+    }, 500);
 });
 </script>
