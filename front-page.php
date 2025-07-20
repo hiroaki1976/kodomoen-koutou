@@ -15,8 +15,8 @@
     ?>
 
     <!-- メインビジュアル -->
-    <!-- Swiper CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <!-- スライダーver2 - 左右に前後のスライドが見えるバージョン（コメントアウト） -->
+    <!--
     <div class="main-visual">
       <div class="swiper main-swiper">
         <div class="swiper-wrapper">
@@ -51,9 +51,48 @@
             </div>
           </div>
         </div>
-        <!-- ナビゲーションボタン -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    -->
+
+    <!-- スライダーver1 - シンプルなフェードスライダー -->
+    <div class="main-visual">
+      <div class="swiper main-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top1.jpg" alt="メインビジュアル1" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top2.jpg" alt="メインビジュアル2" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top3.jpg" alt="メインビジュアル3" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top4.jpg" alt="メインビジュアル4" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top5.jpg" alt="メインビジュアル5" />
+            <div class="illustration-overlay">
+              <h2 class="main-visual-text">愛情と学びで育む<br />心と未来の翼</h2>
+            </div>
+          </div>
+        </div>
         <!-- ページネーション -->
         <div class="swiper-pagination"></div>
       </div>
@@ -593,7 +632,7 @@
           <div class="en-events-name-reverse">
             <ul>
               <li>運動会</li>
-              <li>お泊まり会</li>
+              <li>おたのしみ会</li>
               <li>秋の遠足</li>
             </ul>
           </div>
@@ -699,9 +738,11 @@
     </section>
 
     <?php get_footer(); ?>
-<!-- Swiper JS（フッター直前などでOK） -->
+<!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+// スライダーver2 - 左右に前後のスライドが見えるバージョン（コメントアウト）
+/*
 document.addEventListener('DOMContentLoaded', function() {
   const mainSwiper = new Swiper('.main-swiper', {
     effect: 'slide',
@@ -734,10 +775,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
     
-    // スライド変更時のイベント
     on: {
       slideChange: function () {
-        // すべてのスライドの文字を非表示
         const allSlides = this.slides;
         allSlides.forEach(slide => {
           const text = slide.querySelector('.main-visual-text');
@@ -746,7 +785,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         });
         
-        // アクティブスライドの文字のみ表示（デスクトップのみ）
         if (window.innerWidth >= 1024) {
           const activeSlide = this.slides[this.activeIndex];
           const activeText = activeSlide.querySelector('.main-visual-text');
@@ -756,7 +794,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
           }
         } else {
-          // モバイル・タブレットでは全スライドの文字を表示
           allSlides.forEach(slide => {
             const text = slide.querySelector('.main-visual-text');
             if (text) {
@@ -766,10 +803,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       },
       
-      // リサイズ時の処理
       resize: function () {
         if (window.innerWidth >= 1024) {
-          // デスクトップではアクティブスライドのみ表示
           const allSlides = this.slides;
           allSlides.forEach(slide => {
             const text = slide.querySelector('.main-visual-text');
@@ -784,7 +819,6 @@ document.addEventListener('DOMContentLoaded', function() {
             activeText.style.opacity = '1';
           }
         } else {
-          // モバイル・タブレットでは全スライドの文字を表示
           const allSlides = this.slides;
           allSlides.forEach(slide => {
             const text = slide.querySelector('.main-visual-text');
@@ -797,7 +831,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // 初期スライドの文字を表示
   setTimeout(() => {
     const firstSlide = mainSwiper.slides[0];
     const firstText = firstSlide.querySelector('.main-visual-text');
@@ -805,5 +838,26 @@ document.addEventListener('DOMContentLoaded', function() {
       firstText.style.opacity = '1';
     }
   }, 500);
+});
+*/
+
+// スライダーver1 - シンプルなフェードスライダー
+document.addEventListener('DOMContentLoaded', function() {
+  const mainSwiper = new Swiper('.main-swiper', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 1500,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
 });
 </script>
