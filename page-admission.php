@@ -10,8 +10,8 @@ get_header(); ?>
 <!-- メインビジュアル -->
 <div class="en-main-visual fade-up">
   <img
-    src="<?php echo get_template_directory_uri(); ?>/img2/nyuen_annnai_top_AIhosei.jpeg"
-    alt="幼稚園のメインビジュアル"
+    src="<?php echo get_template_directory_uri(); ?>/img2/topimage.jpeg"
+    alt="入園案内のメインビジュアル"
     class="en-clipped-image"
   />
   <h2 class="en-main-visual-text">入園のご案内</h2>
