@@ -496,6 +496,10 @@ body {
   margin-bottom: var(--adj-20);
 }
 
+.en-uniform p {
+  font-size: 18px;
+}
+
 .en-uniform p:first-of-type {
   text-align: center;
 }
@@ -503,6 +507,7 @@ body {
 .en-animal-illustration {
   width: 100%;
   max-width: 1080px;
+  margin: 0 auto;
 }
 
 .en-animal-illustration img{
