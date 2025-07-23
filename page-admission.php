@@ -287,6 +287,40 @@ get_header(); ?>
     </div>
 </section>
 
+<!-- 制服 -->
+<section class="en-uniform">
+  <h2>制服</h2>
+    <div class="decoration-line">
+      <div class="decoration-dot dot-blue"></div>
+      <div class="decoration-dot dot-yellow"></div>
+      <div class="decoration-dot dot-pink"></div>
+      <div class="decoration-dot dot-blue"></div>
+      <div class="decoration-dot dot-yellow"></div>
+      <div class="decoration-dot dot-pink"></div>
+    </div>
+
+    <div class="en-uniform-container">
+      <div class="en-uniform">
+        <h3>な　つ</h3>
+        <p>令和8年度から園Tシャツが制服になりました。</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku1.jpeg" alt="夏制服1">
+        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku2.jpeg" alt="夏制服2">
+        <p>新しい夏制服への移行について新たにデザインされた夏制服が完成しました。令和7年度までは、現行の夏制服または私服での登園が可能な「移行期間」となります。令和8年度より、全園児が新しい夏制服への完全移行となる予定です。</p>
+        <p>夏制服は、プロのデザイナーによるオリジナルロゴがあしらわれた、カジュアルで動きやすいデザインです。お子さまが毎日を快適に過ごせるよう、デザイン性と実用性を兼ね備えています。</p>        
+      </div>
+      <div class="en-uniform">
+        <h3>ふ　ゆ</h3>
+        <p>令和8年度から園Tシャツが制服になりました。</p>
+        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku1.jpeg" alt="冬制服1">
+        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku2.jpeg" alt="冬制服2">
+        <p>新しい夏制服への移行について新たにデザインされた夏制服が完成しました。令和7年度までは、現行の夏制服または私服での登園が可能な「移行期間」となります。令和8年度より、全園児が新しい夏制服への完全移行となる予定です。</p>        
+      </div>
+    </div>
+    <div class="en-animal-illustration">
+      <img src="<?php echo get_template_directory_uri(); ?>/img2/doubutu2_1.png" alt="動物イラスト">
+    </div>
+</section>
+
 <!-- こども園概要 -->
 <section class="en-summary">
   <h2>こども園概要</h2>

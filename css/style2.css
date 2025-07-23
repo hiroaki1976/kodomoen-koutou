@@ -460,6 +460,56 @@ body {
       background-image: none;
   }
 
+/* 制服 */
+.en-uniform {
+  margin: var(--adj-80);
+}
+
+.en-uniform h2 {
+  font-size: var(--fz-h2);
+  color: var(--clr-base);
+  margin-bottom: var(--adj-20);
+  text-align: center;
+}
+
+.en-uniform-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1080px;
+  margin: var(--adj-40) auto;
+}
+
+.en-uniform {
+  margin: 0 var(--adj-30);
+}
+
+.en-uniform h3 {
+  font-size: var(--fz-h2);
+  color: var(--clr-base);
+  margin-bottom: var(--adj-20);
+  text-align: center;
+}
+
+.en-uniform p, .en-uniform img {
+  margin-bottom: var(--adj-20);
+}
+
+.en-uniform p:first-of-type {
+  text-align: center;
+}
+
+.en-animal-illustration {
+  width: 100%;
+  max-width: 1080px;
+}
+
+.en-animal-illustration img{
+  display: block;
+  margin: var(--adj-10) auto;
+}
+
 /* こども園概要 */
 .en-summary {
   margin: var(--adj-80)
@@ -995,6 +1045,15 @@ content: "";
   .en-data-table-sp2 .en-nintei-type {
     background-size: 80% 30px;
     background-position: 45% 10%;
+  }
+
+  .en-uniform {
+    margin: var(--adj-40) var(--adj-10);
+  }
+
+  .en-uniform-container {
+    flex-direction: column;
+    gap: 0;
   }
 
   .footer-content {
