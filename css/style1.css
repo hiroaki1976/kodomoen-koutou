@@ -3154,6 +3154,10 @@ section::before {
     padding: 12px 20px;
   }
 
+  .section-title {
+    font-size: 36px;
+  }
+
   #news-events {
     margin-top: 30px;
   }
