@@ -71,8 +71,8 @@
 
 /* 基本設定 */
 @font-face {
-  font-family: 'Boku2';
-  src: url('../boku2r//Boku2-Regular.otf') format('opentype');
+  font-family: "Boku2";
+  src: url("../boku2r//Boku2-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -83,7 +83,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Boku2', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  font-family: "Boku2", "Hiragino Sans", "Yu Gothic", sans-serif;
 }
 
 body {
@@ -93,7 +93,7 @@ body {
 
 /* ページ内リンクのずれを解消する */
 section::before {
-  content:'';
+  content: "";
   display: block;
   padding-top: 180px;
   margin-top: -180px;
@@ -293,6 +293,17 @@ section::before {
   margin: 10px 0;
 }
 
+.garland {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .decoration-dot {
   width: 15px;
   height: 15px;
@@ -385,7 +396,8 @@ section::before {
   padding-top: 80px;
 }
 
-.main-swiper, .swiper-wrapper {
+.main-swiper,
+.swiper-wrapper {
   height: 100%;
 }
 
@@ -410,7 +422,7 @@ section::before {
 .main-visual-text {
   color: #fff;
   font-size: 2.8rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   text-align: right;
   line-height: 1.3;
   pointer-events: none;
@@ -654,11 +666,13 @@ section::before {
   font-weight: bold;
 }
 
-.news-link, .event-link {
+.news-link,
+.event-link {
   text-decoration: none;
 }
 
-.news-link:hover, .event-link:hover {
+.news-link:hover,
+.event-link:hover {
   opacity: 0.5;
 }
 
@@ -751,7 +765,7 @@ section::before {
   position: relative;
 }
 
-#unique-charm::before {
+/* #unique-charm::before {
   content: "";
   position: absolute;
   top: 0;
@@ -764,7 +778,7 @@ section::before {
   background-position: top right;
   z-index: -1;
   clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
-}
+} */
 
 #unique-charm::after {
   content: "";
@@ -779,6 +793,23 @@ section::before {
   background-position: bottom left;
   z-index: -1;
   clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+
+.animal {
+  width: 30vw;
+  height: 11.25vw;
+  position: absolute;
+}
+
+#unique-charm .animal {
+  top: 0;
+  right: 0;
+}
+
+.animal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #unique-charm .container {
@@ -968,7 +999,6 @@ section::before {
 }
 
 @media (max-width: 1200px) {
-
   #unique-charm .container {
     width: 100%;
     padding: 1.5rem;
@@ -986,7 +1016,6 @@ section::before {
 }
 
 @media (max-width: 768px) {
-
   #news-events {
     flex-direction: column;
   }
@@ -1629,13 +1658,13 @@ section::before {
   .activity-card {
     height: 350px;
   }
-	
+
   .activity-frame {
-     top: 65%px;
-     left: 65px;
-     right: 65px;
-     bottom: 65px;
-   }
+    top: 65%px;
+    left: 65px;
+    right: 65px;
+    bottom: 65px;
+  }
 
   .activity-title {
     top: 30px;
@@ -1934,15 +1963,14 @@ section::before {
 /* 園での生活 */
 #daily-life {
   position: relative;
-  min-height: 800px;
   padding-top: 120px; /* ページ内リンクのずれを解消する */
   margin-top: -120px; /* ページ内リンクのずれを解消する */
 }
 
-#daily-life::before {
+/* #daily-life::before {
   content: "";
   position: absolute;
-  top: 20%;
+  top: 25%;
   right: 0;
   width: 50%;
   height: 50%;
@@ -1967,7 +1995,7 @@ section::before {
   background-position: bottom left;
   z-index: 0;
   clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
-}
+} */
 
 .daily-life-cover {
   margin-top: 100px;
@@ -1985,10 +2013,10 @@ section::before {
   color: var(--clr-white);
   font-size: 4rem;
   font-weight: bold;
-  z-index: 2;
+  z-index: 4;
 }
 
-.daily-life-cover img {
+.daily-life-cover-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1996,7 +2024,7 @@ section::before {
   z-index: 1;
 }
 
-.daily-life-cover .section-title {
+.daily-life-cover .daily-life-cover-img {
   position: absolute;
   bottom: 10%;
   left: 18%;
@@ -2005,13 +2033,31 @@ section::before {
   text-align: center;
 }
 
-.daily-life-cover .decoration-line {
+.daily-life-cover-left {
+  width: 40%;
+  height: 600px;
+}
+
+.daily-life-cover-left .section-title-daily-life {
   position: absolute;
-  bottom: 5%;
-  left: 15%;
-  justify-content: flex-start;
-  z-index: 3;
-  margin: 0;
+  bottom: 20%;
+  left: 18%;
+  font-size: var(--fz-h2);
+  color: var(--clr-base);
+  text-align: center;
+}
+
+.daily-life-cover-left .garland-1 {
+  position: absolute;
+  bottom: 0%;
+  left: 7%;
+}
+
+.daily-life-cover-left .garland-1 img {
+  width: 30vw;
+  height: 11.25vw;
+  object-fit: cover;
+  object-position: 30%;
 }
 
 .daily-life-container {
@@ -2022,6 +2068,21 @@ section::before {
   z-index: 1;
 }
 
+.daily-life-cover-rp {
+  display: none;
+}
+
+.deco-line {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.animal-grass {
+  width: 50vw;
+  height: 18.75vw;
+  display: flex;
+}
 /* スケジュール部分 */
 .schedule-section {
   flex: 0 0 50%;
@@ -2070,13 +2131,23 @@ section::before {
 .en-annual-events {
   margin: var(--adj-80) var(--adj-80);
   position: relative;
-  z-index: 1;
+  z-index: 0;
+}
+
+.en-annual-animal {
+  bottom: -5%;
+  left: 0;
+}
+
+.animal-chick {
+  top: 25%;
+  right: 0;
 }
 
 .en-annual-events::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 10%;
   right: 0;
   width: 0;
   height: 0;
@@ -2095,7 +2166,7 @@ section::before {
   clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
 }
 
-.en-annual-events::after {
+/* .en-annual-events::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2115,7 +2186,7 @@ section::before {
   background-size: 60px 120px;
   z-index: -1;
   clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
-}
+} */
 
 .en-annual-events h2 {
   color: var(--clr-base);
@@ -2350,15 +2421,15 @@ section::before {
 }
 
 .privacy-policy-text {
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .privacy-policy-text a {
-    color: #9b1d22;
+  color: #9b1d22;
 }
 
 .submit-btn {
@@ -2468,7 +2539,7 @@ section::before {
 
 /* 選択状態の中央の丸を表示 */
 .radio-item input[type="radio"]:checked::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2567,7 +2638,7 @@ section::before {
 }
 
 @media (max-width: 768px) {
-   .header {
+  .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2575,15 +2646,15 @@ section::before {
   }
 
   .logo-container {
-	flex: 1;
-	display: flex;
+    flex: 1;
+    display: flex;
     justify-content: center;
     margin-left: 40px;
   }
 
   .school-name h2 {
     font-size: 20px;
-	padding: 10px 0px;
+    padding: 10px 0px;
   }
 
   .school-name h1 {
@@ -2608,7 +2679,7 @@ section::before {
   /* ハンバーガーメニューを表示 */
   .hamburger {
     display: flex;
-	position: absolute;
+    position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
@@ -2663,6 +2734,10 @@ section::before {
   .events {
     width: 100%;
     margin-bottom: 30px;
+  }
+
+  .garland img {
+    width: 100%;
   }
 
   .divider {
@@ -2814,6 +2889,10 @@ section::before {
     width: 100%;
   }
 
+  .en-annual-events .animal {
+    bottom: -3%;
+  }
+
   .form-container {
     margin: 10px;
     padding: 20px;
@@ -2928,10 +3007,36 @@ section::before {
     font-size: 1.5rem;
   }
 
-  .daily-life-cover .decoration-line {
-    bottom: 4%;
-    left: 3%;
+  .daily-life-cover-left {
+    display: none;
   }
+
+  .daily-life-cover-rp {
+    display: block;
+    justify-content: center;
+  }
+
+  .daily-life-cover-rp .section-title-daily-life {
+    font-size: var(--fz-h2);
+    color: var(--clr-base);
+    text-align: center;
+  }
+
+  .daily-life-cover-rp .garland-1 {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .deco-line {
+    justify-content: center;
+  }
+
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
@@ -2992,7 +3097,7 @@ section::before {
   .logo-container {
     flex-direction: column;
     text-align: center;
-    margin-left: 40px
+    margin-left: 40px;
   }
 
   .logo {
@@ -3030,7 +3135,7 @@ section::before {
   .hamburger {
     width: 40px;
     height: 40px;
-	left: 10px;
+    left: 10px;
   }
 
   .hamburger span {
@@ -3165,6 +3270,11 @@ section::before {
   .en-events-name-reverse ul li {
     font-size: 24px;
   }
+
+  .en-annual-events .animal {
+    bottom: -1%;
+  }
+
   .search-btn {
     width: 100%;
   }

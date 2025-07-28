@@ -225,14 +225,15 @@
     <section id="unique-charm">
       <h2 class="section-title">幌東にしかない魅力</h2>
 
-      <div class="decoration-line">
-        <div class="decoration-dot dot-blue"></div>
-        <div class="decoration-dot dot-yellow"></div>
-        <div class="decoration-dot dot-pink"></div>
-        <div class="decoration-dot dot-blue"></div>
-        <div class="decoration-dot dot-yellow"></div>
-        <div class="decoration-dot dot-pink"></div>
+      <div class="garland">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
       </div>
+
+      <div class="animal">
+        <img class="animal-img" src="<?php echo get_template_directory_uri(); ?>/img/parts/chick-3.png" alt="ひよこ" />
+      </div>
+
+      
 
       <div class="container">
         <div class="unique-charm-container fade-up">
@@ -247,7 +248,7 @@
             <img
               class="unique-charm-circle"
               src="<?php echo get_template_directory_uri(); ?>/img/charm-right.png"
-              alt=""
+              alt="園での日常写真"
             />
           </div>
 
@@ -287,7 +288,7 @@
             <img
               class="unique-charm-circle"
               src="<?php echo get_template_directory_uri(); ?>/img/charm-left.jpg"
-              alt=""
+              alt="そり滑り"
             />
           </div>
 
@@ -334,13 +335,8 @@
       <div class="feature-title">
         <h2 class="section-title">幌東の特色</h2>
 
-        <div class="decoration-line">
-          <div class="decoration-dot dot-blue"></div>
-          <div class="decoration-dot dot-yellow"></div>
-          <div class="decoration-dot dot-pink"></div>
-          <div class="decoration-dot dot-blue"></div>
-          <div class="decoration-dot dot-yellow"></div>
-          <div class="decoration-dot dot-pink"></div>
+        <div class="garland">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
         </div>
       </div>
 
@@ -465,13 +461,8 @@
     <section id="principal-greeting">
       <h2 class="section-title">園長挨拶・スタッフ紹介</h2>
 
-      <div class="decoration-line">
-        <div class="decoration-dot dot-blue"></div>
-        <div class="decoration-dot dot-yellow"></div>
-        <div class="decoration-dot dot-pink"></div>
-        <div class="decoration-dot dot-blue"></div>
-        <div class="decoration-dot dot-yellow"></div>
-        <div class="decoration-dot dot-pink"></div>
+      <div class="garland">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
       </div>
 
       <div class="principal-greeting-content">
@@ -527,20 +518,24 @@
 
     <section id="daily-life">
       <div class="daily-life-cover fade-up">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/daily-life-cover.png" alt="園の1日" />
-        <h2 class="section-title">園の1日</h2>
-
-        <div class="decoration-line">
-          <div class="decoration-dot dot-blue"></div>
-          <div class="decoration-dot dot-yellow"></div>
-          <div class="decoration-dot dot-pink"></div>
-          <div class="decoration-dot dot-blue"></div>
-          <div class="decoration-dot dot-yellow"></div>
-          <div class="decoration-dot dot-pink"></div>
+        <img class="daily-life-cover-img" src="<?php echo get_template_directory_uri(); ?>/img/parts/daily-life-cover.png" alt="園の1日" />
+        <div class="daily-life-cover-left">
+          <h2 class="section-title-daily-life">園の1日</h2>
+          <div class="garland-1">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-1.png" alt="ガーランド" />
+          </div>
         </div>
       </div>
 
+      
+
       <div class="daily-life-container">
+        <div class="daily-life-cover-rp">
+          <h2 class="section-title-daily-life">園の1日</h2>
+          <div class="garland-1">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-1.png" alt="ガーランド" />
+          </div>
+        </div>
         <!-- 左側：スケジュール部分 -->
         <div class="schedule-section">
           <img
@@ -567,18 +562,21 @@
           </div>
         </div>
       </div>
+      
+      <div class="deco-line">
+        <div class="animal-grass">
+          <img class="animal-img" src="<?php echo get_template_directory_uri(); ?>/img/parts/animal-5.png" alt="動物" />
+          <img class="animal-img" src="<?php echo get_template_directory_uri(); ?>/img/parts/grass.png" alt="草" />
+        </div>
+      </div>
+      
     </section>
 
     <!-- 年間行事 -->
     <section class="en-annual-events">
       <h2 class="section-title">年間行事</h2>
-      <div class="decoration-line">
-        <div class="decoration-dot dot-blue"></div>
-        <div class="decoration-dot dot-yellow"></div>
-        <div class="decoration-dot dot-pink"></div>
-        <div class="decoration-dot dot-blue"></div>
-        <div class="decoration-dot dot-yellow"></div>
-        <div class="decoration-dot dot-pink"></div>
+      <div class="garland">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
       </div>
 
       <div class="en-events-container">
@@ -607,6 +605,11 @@
               <li>参観日</li>
               <li>親子遠足</li>
             </ul>
+            
+            <div class="animal animal-chick">
+              <img class="animal-img" src="<?php echo get_template_directory_uri(); ?>/img/parts/chick-3.png" alt="ひよこ" />
+            </div>
+
           </div>
         </div>
 
@@ -693,6 +696,10 @@
             </ul>
           </div>
         </div>
+      </div>
+      
+      <div class="animal en-annual-animal">
+        <img class="animal-img" src="<?php echo get_template_directory_uri(); ?>/img/parts/animal-2.png" alt="動物" />
       </div>
     </section>
 
