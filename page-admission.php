@@ -10,7 +10,7 @@ get_header(); ?>
 <!-- メインビジュアル -->
 <div class="en-main-visual fade-up">
   <img
-    src="<?php echo get_template_directory_uri(); ?>/img2/topimage.jpeg"
+    src="<?php echo get_template_directory_uri(); ?>/img2/topimage2.jpg"
     alt="入園案内のメインビジュアル"
     class="en-clipped-image"
   />
@@ -302,7 +302,6 @@ get_header(); ?>
     <div class="en-uniform-container">
       <div class="en-uniform">
         <h3>な　つ</h3>
-        <p>令和8年度から園Tシャツが制服になりました。</p>
         <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku1.jpeg" class="fade-up" alt="夏制服1">
         <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku2.jpeg" class="fade-up-2" alt="夏制服2">
         <p>新しい夏制服への移行について新たにデザインされた夏制服が完成しました。令和7年度までは、現行の夏制服または私服での登園が可能な「移行期間」となります。令和8年度より、全園児が新しい夏制服への完全移行となる予定です。</p>
@@ -310,10 +309,9 @@ get_header(); ?>
       </div>
       <div class="en-uniform">
         <h3>ふ　ゆ</h3>
-        <p>令和8年度から園Tシャツが制服になりました。</p>
-        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku1.jpeg" class="fade-up-2" alt="冬制服1">
-        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku2.jpeg" class="fade-up" alt="冬制服2">
-        <p>新しい夏制服への移行について新たにデザインされた夏制服が完成しました。令和7年度までは、現行の夏制服または私服での登園が可能な「移行期間」となります。令和8年度より、全園児が新しい夏制服への完全移行となる予定です。</p>        
+        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku3.jpeg" class="fade-up-2" alt="冬制服1">
+        <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku4.jpeg" class="fade-up" alt="冬制服2">
+        <p>冬制服は長年にわたり愛されてきた伝統的なデザインで、入園式や卒園式など数々の式典で着用されてきました。格式と歴史を感じる由緒ある制服です。</p>        
       </div>
     </div>
     <div class="en-animal-illustration">

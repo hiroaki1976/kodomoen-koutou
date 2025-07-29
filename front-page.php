@@ -226,7 +226,7 @@
       <h2 class="section-title">幌東にしかない魅力</h2>
 
       <div class="garland">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.svg" alt="ガーランド" />
       </div>
 
       <div class="animal">
@@ -287,8 +287,8 @@
           <div class="unique-charm-content photo-placeholder-bottom">
             <img
               class="unique-charm-circle"
-              src="<?php echo get_template_directory_uri(); ?>/img/charm-left.jpg"
-              alt="そり滑り"
+              src="<?php echo get_template_directory_uri(); ?>/img/charm-left2.jpg"
+              alt="お昼寝"
             />
           </div>
 
@@ -336,7 +336,7 @@
         <h2 class="section-title">幌東の特色</h2>
 
         <div class="garland">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
+          <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.svg" alt="ガーランド" />
         </div>
       </div>
 
@@ -362,7 +362,7 @@
                 <li>アレルギー対応・栄養バランスを考えた</li>
                 <li class="content-list-item">安心・安全な食事</li>
               </ul>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/feature-left-img.jpg" alt="安全な環境" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/feature-left-img2.jpg" alt="安全な環境" />
             </div>
           </div>
         </div>
@@ -462,7 +462,7 @@
       <h2 class="section-title">園長挨拶・スタッフ紹介</h2>
 
       <div class="garland">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.svg" alt="ガーランド" />
       </div>
 
       <div class="principal-greeting-content">
@@ -539,7 +539,7 @@
         <!-- 左側：スケジュール部分 -->
         <div class="schedule-section">
           <img
-            src="<?php echo get_template_directory_uri(); ?>/img/parts/daily-life-schedule.png"
+            src="<?php echo get_template_directory_uri(); ?>/img/parts/daily-life-schedule.svg"
             alt="園の1日のスケジュール"
           />
         </div>
@@ -548,7 +548,7 @@
         <div class="photos-section">
           <div class="photos-grid">
             <div class="photo-item fade-up">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-top.jpg" alt="園での生活1" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-top2.jpg" alt="園での生活1" />
             </div>
             <div class="photo-item fade-up-2">
               <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-top.jpg" alt="園での生活2" />
@@ -576,7 +576,7 @@
     <section class="en-annual-events">
       <h2 class="section-title">年間行事</h2>
       <div class="garland">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.png" alt="ガーランド" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/parts/garland-3.svg" alt="ガーランド" />
       </div>
 
       <div class="en-events-container">
@@ -585,7 +585,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/parts/schedule-4-6.png" alt="4月5月6月" />
             <img
               class="en-events-photos-img1 fade-up"
-              src="<?php echo get_template_directory_uri(); ?>/img/annual-event46-1.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/img/annual-event46-1-2.jpg"
               alt="4-6月行事写真1"
             />
             <img
@@ -646,7 +646,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/parts/schedule-10-12.png" alt="10月11月12月" />
             <img
               class="en-events-photos-img1 fade-up"
-              src="<?php echo get_template_directory_uri(); ?>/img/annual-event1012-1.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/img/annual-event1012-1-2.jpeg"
               alt="10-12月行事写真1"
             />
             <img
@@ -674,7 +674,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/parts/schedule-1-3.png" alt="1月2月3月" />
             <img
               class="en-events-photos-img1 fade-up"
-              src="<?php echo get_template_directory_uri(); ?>/img/annual-event13-3.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/img/annual-event13-3-2.jpg"
               alt="1-3月行事写真1"
             />
             <img
