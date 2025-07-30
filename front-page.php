@@ -247,7 +247,7 @@
           <div class="unique-charm-content photo-placeholder">
             <img
               class="unique-charm-circle"
-              src="<?php echo get_template_directory_uri(); ?>/img/charm-right.png"
+              src="<?php echo get_template_directory_uri(); ?>/img/charm-right2.jpeg"
               alt="園での日常写真"
             />
           </div>
@@ -554,10 +554,10 @@
               <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-top.jpg" alt="園での生活2" />
             </div>
             <div class="photo-item fade-up-2">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-bottom.jpg" alt="園での生活3" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-bottom.jpg" alt="園での生活3" />
             </div>
             <div class="photo-item fade-up">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-bottom.jpg" alt="園での生活4" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-bottom2.jpeg" alt="園での生活4" />
             </div>
           </div>
         </div>

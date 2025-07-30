@@ -298,8 +298,8 @@ section::before {
   justify-content: center;
   height: 120px;
   img {
-    width: 60%;
-    height: 100%;
+    width: 50vw;
+    height: 8.3vw;
     object-fit: cover;
   }
 }
@@ -2734,10 +2734,6 @@ section::before {
   .events {
     width: 100%;
     margin-bottom: 30px;
-  }
-
-  .garland img {
-    width: 100%;
   }
 
   .divider {
