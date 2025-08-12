@@ -122,9 +122,9 @@ body {
 .en-main-visual {
   position: relative;
   width: 100%;
-  height: 600px;
-  padding-top: 10px;
-  margin: 10px auto 0;
+  height: 650px;
+  padding-top: 40px;
+  margin: 40px auto 0;
 }
 
 .en-main-visual img {
@@ -135,6 +135,7 @@ body {
   height: 100%;
   margin-top: 130px;
   object-fit: cover;
+  object-position: 0 -50px;
 }
 
 .en-main-visual-text {
@@ -401,6 +402,11 @@ body {
 
   .en-capacity-subheader th {
       background-color: var(--clr-white);
+  }
+
+  .en-capacity-subheader td {
+    text-align: left;
+    font-size: 16px;
   }
 
   .en-dotted-line-row td {
@@ -826,7 +832,7 @@ content: "";
     }  
 
     .en-data-table-sp1 .en-nintei-type {
-      background-size: 50% 30px;
+      background-size: 35% 30px;
       background-position: 45% 15%;
     }
 
@@ -874,7 +880,7 @@ content: "";
   }
 
   .en-data-table-sp2 .en-nintei-type {
-    background-size: 55% 30px;
+    background-size: 80% 30px;
     background-position: 45% 10%;
   }
 
@@ -966,6 +972,10 @@ content: "";
     top: 80%;
   }
 
+  .en-admission-reception {
+    margin: 160px var(--adj-20) var(--adj-10);
+    } 
+
   .en-first-certification-title {
     background-size: 120%;
   }
@@ -989,16 +999,16 @@ content: "";
   }
 
   .en-circle {
-    background-size: 75%;
+    background-size: 48%;
     background-position: 50% 50%;
     margin: 40px auto;
   }
   .en-circle:nth-of-type(3) {
-    background-size: 75%;
+    background-size: 48%;
     background-position: 50% 50%;
   }
   .en-circle:nth-of-type(5) {   
-    background-size: 75%;
+    background-size: 48%;
     background-position: 50% 50%;
   }
   
@@ -1043,7 +1053,7 @@ content: "";
   }
 
   .en-data-table-sp2 .en-nintei-type {
-    background-size: 80% 30px;
+    background-size: 80% 60px;
     background-position: 45% 10%;
   }
 

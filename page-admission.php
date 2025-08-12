@@ -172,7 +172,8 @@ get_header(); ?>
             <th>0歳</th>
             <th>1歳</th>
             <th>2歳</th>
-            <td colspan="4"></td>
+            <td></td>
+            <td colspan="3">※認定を問わず保育環境充実費 内訳＝保育環境充実費 3,000円／正課特別活動費 2,000円</td>
           </tr>
         </tfoot>
       </table>
@@ -271,9 +272,6 @@ get_header(); ?>
             <td class="en-no-fee">—</td>
           </tr>
           <tr>
-            <td colspan="4"></td>
-          </tr>
-          <tr>
             <td class="en-nintei-type en-nintei3">
               3号認定
               <span class="en-age-note">(0・1・2歳)</span>
@@ -281,6 +279,10 @@ get_header(); ?>
             <td>5,000円/月</td>
             <td class="en-no-fee">—</td>
             <td class="en-no-fee">—</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="3">※認定を問わず保育環境充実費 内訳＝保育環境充実費 3,000円／正課特別活動費 2,000円</td>
           </tr>
         </tbody>
       </table>
@@ -304,8 +306,8 @@ get_header(); ?>
         <h3>な　つ</h3>
         <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku1.jpeg" class="fade-up" alt="夏制服1">
         <img src="<?php echo get_template_directory_uri(); ?>/img2/seifuku2.jpeg" class="fade-up-2" alt="夏制服2">
-        <p>新しい夏制服への移行について新たにデザインされた夏制服が完成しました。令和7年度までは、現行の夏制服または私服での登園が可能な「移行期間」となります。令和8年度より、全園児が新しい夏制服への完全移行となる予定です。</p>
-        <p>夏制服は、プロのデザイナーによるオリジナルロゴがあしらわれた、カジュアルで動きやすいデザインです。お子さまが毎日を快適に過ごせるよう、デザイン性と実用性を兼ね備えています。</p>        
+        <p>【新しい夏制服への移行について】<br>新たにデザインされた夏制服が完成しました。<br>令和7年度までは、現行の夏制服または私服での登園が可能な「移行期間」となります。令和9年度より、全園児が新しい夏制服への完全移行となる予定です。</p>
+        <p>新制服は、プロのデザイナーによるオリジナルロゴがあしらわれた、カジュアルで動きやすいデザインです。<br>自由なカラーを選んで着用し、お子さまが毎日を快適に過ごせるよう、デザイン性と実用性を兼ね備えています。</p>        
       </div>
       <div class="en-uniform">
         <h3>ふ　ゆ</h3>

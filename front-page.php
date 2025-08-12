@@ -215,7 +215,7 @@
           </div>
 
           <div class="policy-image fade-up">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/policy.jpg" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/policy-r.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -255,11 +255,6 @@
           <div class="center-content">
             <h2 class="inclusive-title">
               <div class="curved-text">
-                <span class="letter">"</span>
-                <span class="letter">違</span>
-                <span class="letter">い</span>
-                <span class="letter">"</span>
-                <span class="letter">を</span>
                 <span class="letter">愛</span>
                 <span class="letter">せ</span>
                 <span class="letter">る</span>
@@ -387,7 +382,7 @@
                 <div class="activity-title">英語あそび</div>
                 <div class="activity-photo1">
                   <img
-                    src="<?php echo get_template_directory_uri(); ?>/img/feature-english-right.jpg"
+                    src="<?php echo get_template_directory_uri(); ?>/img/feature-english-right2.jpg"
                     alt="英語あそび1"
                   />
                 </div>
@@ -539,7 +534,7 @@
         <!-- 左側：スケジュール部分 -->
         <div class="schedule-section">
           <img
-            src="<?php echo get_template_directory_uri(); ?>/img/parts/daily-life-schedule.svg"
+            src="<?php echo get_template_directory_uri(); ?>/img/parts/daily-life-schedule3.svg"
             alt="園の1日のスケジュール"
           />
         </div>
@@ -548,10 +543,10 @@
         <div class="photos-section">
           <div class="photos-grid">
             <div class="photo-item fade-up">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-top2.jpg" alt="園での生活1" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-left-top3.jpg" alt="園での生活1" />
             </div>
             <div class="photo-item fade-up-2">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-top.jpg" alt="園での生活2" />
+              <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-top2.jpg" alt="園での生活2" />
             </div>
             <div class="photo-item fade-up-2">
               <img src="<?php echo get_template_directory_uri(); ?>/img/daily-life-right-bottom.jpg" alt="園での生活3" />
@@ -585,7 +580,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/parts/schedule-4-6.png" alt="4月5月6月" />
             <img
               class="en-events-photos-img1 fade-up"
-              src="<?php echo get_template_directory_uri(); ?>/img/annual-event46-1-2.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/img/annual-event46-1-3.jpg"
               alt="4-6月行事写真1"
             />
             <img
@@ -603,7 +598,7 @@
             <ul>
               <li>入園式</li>
               <li>参観日</li>
-              <li>親子遠足</li>
+              <li>春の遠足</li>
             </ul>
             
             <div class="animal animal-chick">
@@ -618,7 +613,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/parts/schedule-7-9.png" alt="7月8月9月" />
             <img
               class="en-events-photos-img1 fade-up"
-              src="<?php echo get_template_directory_uri(); ?>/img/annual-event79-3.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/img/annual-event79-3-2.jpg"
               alt="7-9月行事写真1"
             />
             <img
@@ -635,7 +630,7 @@
           <div class="en-events-name-reverse">
             <ul>
               <li>運動会</li>
-              <li>おたのしみ会</li>
+              <li>年長おたのしみ会</li>
               <li>秋の遠足</li>
             </ul>
           </div>
@@ -651,7 +646,7 @@
             />
             <img
               class="en-events-photos-img2 fade-up-2"
-              src="<?php echo get_template_directory_uri(); ?>/img/annual-event1012-2.jpg"
+              src="<?php echo get_template_directory_uri(); ?>/img/annual-event1012-2-2.jpg"
               alt="10-12月行事写真2"
             />
             <img
@@ -662,7 +657,7 @@
           </div>
           <div class="en-events-name">
             <ul>
-              <li>KOUTOU FESTIVAL</li>
+              <li>KOUTOUフェスティバル</li>
               <li>生活発表会</li>
               <li>クリスマス会</li>
             </ul>
